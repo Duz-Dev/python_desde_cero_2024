@@ -1,6 +1,6 @@
 #VARIABLES
 
-# nombre_alumno = snake_case
+# nombre_alumno = "snake_case"
 
 datos = "asdadasd"
 datos_alumnos = "asdasda"
