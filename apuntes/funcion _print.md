@@ -35,4 +35,58 @@ print("Esto está en la misma línea.")
 # >>> Esto es una línea. Esto está en la misma línea
 ```
 
+## Argumento `file`
+
+El argumento `file` en la función `print()` determina hacia dónde se enviará la salida del texto que se imprima. Por defecto, este argumento está configurado en `sys.stdout`, que representa la consola estándar. Sin embargo, puedes cambiar este comportamiento para dirigir la salida a otro dispositivo, como un archivo de texto abierto en modo escritura.
+
+#### Detalles y Uso
+
+- **Valor por defecto**: `sys.stdout`
+- **Posibles valores**:
+  - `sys.stdout`: Consola estándar.
+  - Objeto de archivo abierto: Puedes especificar un objeto de archivo que se haya abierto previamente en modo escritura (`'w'` o `'a'`).
+
+#### Ejemplo 1: Redirigir la salida a un archivo
+
+```python
+# Abre un archivo en modo escritura
+with open('output.txt', 'w') as f:
+    # Redirige la salida de print() al archivo 'output.txt'
+    print("Este es un mensaje de prueba.", file=f)
+    print("Este es otro mensaje.", file=f)
+```
+
+En este ejemplo:
+
+- Se abre el archivo `output.txt` en modo escritura (`'w'`).
+- Se utiliza `print()` con el argumento `file=f` para redirigir la salida al archivo `output.txt`.
+- Los mensajes especificados se escriben en el archivo en lugar de mostrarse en la consola.
+
+### Argumento `flush`
+
+El argumento `flush` en la función `print()` controla si el búfer de salida debe vaciarse inmediatamente después de imprimir los mensajes. El búfer es una región de memoria utilizada para almacenar temporalmente datos antes de enviarlos a su destino final (como la consola o un archivo).
+
+#### Detalles y Uso
+
+- **Valor por defecto**: `False`
+- **Posibles valores**:
+  - `True`: Vacía el búfer inmediatamente después de imprimir.
+  - `False`: Permite que el búfer se vacíe de manera automática según las políticas de optimización de Python.
+
+#### Ejemplo 2: Forzar el vaciado del búfer
+
+```python
+print("Mensaje 1")
+# Espera para que el búfer se vacíe automáticamente
+
+print("Mensaje 2", flush=True)
+# Forza el vaciado del búfer después de imprimir "Mensaje 2"
+```
+
+En este ejemplo:
+
+- El primer `print()` no tiene `flush=True`, por lo que el vaciado del búfer puede no ser inmediato.
+- El segundo `print()` utiliza `flush=True`, lo que asegura que el búfer se vacíe inmediatamente después de imprimir "Mensaje 2". Esto puede ser útil cuando se necesita garantizar que la salida sea visible de inmediato, por ejemplo, en aplicaciones donde la sincronización de la salida es crítica.
+
+
 <span>repositorio: https://github.com/Duz-Dev/python_class</span>
