@@ -19,7 +19,7 @@ En las carpetas que dicen 'Bloque #' estarán los script comentados y utilizados
 
 | N°  | Tema   |
 | ------- | -------- |
-| 1   | Introducción a Python   |
+| 1   | [Introducción a Python](./apuntes/01_introduccion.md)   |
 | 2   |  Tipos de datos   |
 | 3   | Función print    |
 | 4   | Variables    |

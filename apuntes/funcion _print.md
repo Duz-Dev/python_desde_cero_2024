@@ -89,4 +89,4 @@ En este ejemplo:
 - El segundo `print()` utiliza `flush=True`, lo que asegura que el búfer se vacíe inmediatamente después de imprimir "Mensaje 2". Esto puede ser útil cuando se necesita garantizar que la salida sea visible de inmediato, por ejemplo, en aplicaciones donde la sincronización de la salida es crítica.
 
 
-<span>repositorio: https://github.com/Duz-Dev/python_class</span>
+<span>repositorio: https://github.com/Duz-Dev/python_desde_cero_2024</span>
