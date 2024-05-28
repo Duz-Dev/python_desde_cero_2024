@@ -8,6 +8,7 @@ Antes de comenzar de lleno en este repositorio, es requisito que tengas a la man
 - ¿Qué es Python?
 - Interpretador vs compilador
 - Editor de código
+- ¿Qué es una terminal? (utilización básica)
 
 También, en caso de que Python sea el primer lenguaje de programación con el cual tengas contacto, seria muy recomendable que primero abordes algunos conceptos y temas de "lógica de programación". Entender lo que son las variables, tipos de dato, condicionales, ciclos, ect. De lo contrario te sera mucho mas difícil comprender lo que empezaremos abordar de aquí en adelante.
 
