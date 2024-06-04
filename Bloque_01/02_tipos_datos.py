@@ -1,12 +1,14 @@
 
 #TODO : Datos en python
 
-#!string (str) -> cadena/texto
+#! string (str) -> cadena/texto
 
 "Soy un texto"
 'Soy un texto pero de comillas simples'
+'Vivo en "Bolivia"'
 
 #!Números. int(integer),float -> Enteros, flotantes/decimales
+
 14 #int
 31.15 #float
 01.2 #No es recomendable empezar números con cero como en este caso.
@@ -22,6 +24,8 @@ False
 
 None #Expresa 'nada', la ausencia de valor.
 
+print(print())
+
 #*Estructuras de datos
 
 #!List -> Lista
@@ -33,16 +37,10 @@ None #Expresa 'nada', la ausencia de valor.
 
 (123,123,"lorem","#")
 
-a = 10
-b = 5
+#! dict -> diccionario
+{"clave":"valor"}
 
-lista = [1,2,3]
-lista2 = lista
-x = 10
-y = x
+#! set -> conjunto
+{"valor","valor2"}
 
-print(id(lista))
-print(id(lista2))
-
-print(id(x))
-print(id(y))
+"string", 13
