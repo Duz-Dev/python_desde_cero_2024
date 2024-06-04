@@ -20,7 +20,7 @@ En las carpetas que dicen 'Bloque #' estarán los script comentados y utilizados
 | N°  | Tema   |
 | ------- | -------- |
 | 1   | [Introducción a Python](./apuntes/01_introduccion.md)   |
-| 2   |  Tipos de datos I   |
+| 2   |  [Tipos de datos I](./apuntes/02_tipos_datos.md)   |
 | 3   | Control de flujo    |
 | 4   | Funciones    |
 | 5   | Tipos de datos II   |

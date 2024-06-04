@@ -1,12 +1,16 @@
 # Función print()
 
+> Esta función es nativa dentro de python y es la que utilizamos para mostrar información en la consola. El texto a continuación puede ser algo complejo si aun no conoces nada del tema de funciones, por lo que te recomendaría simplemente dar una leida y despues comprenderlo una vez ya hayas tocando el tema de funciones en este curso.
+
+## Definición
+
 `print()` en Python es una función incorporada que se utiliza para imprimir mensajes en la consola o en otros dispositivos de salida, como archivos de texto. Su sintaxis básica es la siguiente:
 
 ```python
 print(*objects, sep=' ', end='\n', file=sys.stdout, flush=False)
 ```
 
-- `objects`: Este es un argumento opcional y puede contener uno o más objetos que se imprimirán. Puedes pasar varios objetos separados por comas y `print()` los imprimirá uno después del otro.
+- `objects`: Este es un argumento opcional y puede contener uno o más objetos que se imprimirán. Puedes pasar varios objetos separados por comas y `print()` los imprimirá uno después del otro. Gracias al asterisco '*' colocado al principio de este parámetro, todos los argumentos ingresados serán tomados como objetos a imprimir. Por ende, los demás parámetros de dicha función deben de ser **explícitamente** ingresados si es que queremos cambiar su argumento.
 
 - `sep`: Este es el separador entre los objetos que se van a imprimir. Por defecto, es un espacio en blanco. Puedes cambiarlo especificando otro valor como una cadena de texto.
 
@@ -35,7 +39,7 @@ print("Esto está en la misma línea.")
 # >>> Esto es una línea. Esto está en la misma línea
 ```
 
-## Argumento `file`
+### Argumento `file`
 
 El argumento `file` en la función `print()` determina hacia dónde se enviará la salida del texto que se imprima. Por defecto, este argumento está configurado en `sys.stdout`, que representa la consola estándar. Sin embargo, puedes cambiar este comportamiento para dirigir la salida a otro dispositivo, como un archivo de texto abierto en modo escritura.
 
