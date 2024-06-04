@@ -1,6 +1,8 @@
 # Función print()
 
-> Esta función es nativa dentro de python y es la que utilizamos para mostrar información en la consola. El texto a continuación puede ser algo complejo si aun no conoces nada del tema de funciones, por lo que te recomendaría simplemente dar una leida y despues comprenderlo una vez ya hayas tocando el tema de funciones en este curso.
+> *Repositorio*: [python_desde_cero_2024](https://github.com/Duz-Dev/python_desde_cero_2024) - fecha: 3/06/2024
+
+> Esta función es nativa dentro de python y es la que utilizamos para mostrar información en la consola. El texto a continuación puede ser algo complejo si aun no conoces nada del tema de funciones, por lo que te recomendaría simplemente dar una leída y después compréndelo una vez ya hayas tocando el tema de funciones en este curso.
 
 ## Definición
 
@@ -91,6 +93,3 @@ En este ejemplo:
 
 - El primer `print()` no tiene `flush=True`, por lo que el vaciado del búfer puede no ser inmediato.
 - El segundo `print()` utiliza `flush=True`, lo que asegura que el búfer se vacíe inmediatamente después de imprimir "Mensaje 2". Esto puede ser útil cuando se necesita garantizar que la salida sea visible de inmediato, por ejemplo, en aplicaciones donde la sincronización de la salida es crítica.
-
-
-<span>repositorio: https://github.com/Duz-Dev/python_desde_cero_2024</span>

@@ -10,13 +10,13 @@ En programación, un dato es cualquier tipo de información que puedes almacenar
 
 En términos mas técnicos, un dato es una representación simbólica de información que puede ser almacenada, manipulada y transmitida por un programa. Los datos pueden ser de diferentes tipos, como numéricos, textuales, lógicos, etc.
 
-En Python, siendo un lenguaje de programación de alto nivel y [dinámicamente tipado] [1], gestiona los datos mediante objetos. Todo en Python es un objeto, incluidas las variables y los valores primitivos.
+En Python, siendo un lenguaje de programación de alto nivel y dinámicamente tipado [¹], gestiona los datos mediante objetos. Todo en Python es un objeto, incluidas las variables y los valores primitivos.
 
 En Python, los datos se definen mediante clases y tipos incorporados. Cuando asignas un valor a una variable, Python automáticamente crea un objeto de la clase correspondiente para ese tipo de dato y gestiona la memoria para almacenar este valor. Por ejemplo, al asignar `x = 5`, Python crea un objeto entero con el valor 5.
 
 ## Definición
 
-En Python, un dato como cualquier entidad que puede ser almacenada en la memoria y manipulada por el programa. Los datos en Python están estructurados como objetos de diversas clases incorporadas, tales como `int`, `float`, `str`, `list`, `dict`, `set`,`tuple` y `bool`.
+En Python, un dato como cualquier entidad que puede ser almacenada en la memoria y manipulada por el programa. Los datos en Python están estructurados como objetos de diversas clases incorporadas, tales como `int`, `float`, `str`, `list`, `dict`, `set`, `tuple` y `bool`.
 
 ## Tipos
 
@@ -74,8 +74,8 @@ A continuación mostrare de manera mas detallada cada uno de estos:
 
 ### Amplia tus conocimientos
 
-[1]: #amplia-tus-conocimientos "tooltip"
+[¹]: #amplia-tus-conocimientos "tooltip"
 
-[[1]] Un lenguaje de programación es dinámicamente tipado si una variable puede tomar valores de distintos tipos
+[1] Un lenguaje de programación es dinámicamente tipado si una variable puede tomar valores de distintos tipos
 
 Visita: [Aprendepython.es](https://aprendepython.es/core/datatypes/) para conocer mas de tipos de datos.
