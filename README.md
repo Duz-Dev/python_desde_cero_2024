@@ -6,7 +6,6 @@ Como recomendación si es la primera vez que entraras a python, es que aprendas 
 
 En caso de tener dudas sobre algun tema en especifico, puedes unirte a nuestra [comunidad de Discord![FrontEnd | Sin Fronteras](https://i.postimg.cc/vZx9tjXC/image.png)](https://discord.gg/w3cTzZT3QQ)
 
-
 >Nota: La version de python que utilice en dicho curso es **Python 3.12.2**
 
 ## Organización
@@ -31,4 +30,3 @@ En las carpetas que dicen 'Bloque #' estarán los script comentados y utilizados
 | 10   | Librerias populares  |
 | 11  | Clases y POO   |
 | 12  | Próximamente   |
-
