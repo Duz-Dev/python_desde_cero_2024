@@ -6,7 +6,7 @@
 
 ## ¿Qué es un variable?
 
-Una variable es un espacio en la memoria de la computadora que se usa para almacenar un valor que puede cambiar durante la ejecución de un programa. 
+Una variable es un espacio en la memoria de la computadora que se usa para almacenar un valor que puede cambiar durante la ejecución de un programa.
 
 Imagina que es una caja con una etiqueta (nombre de la variable) donde puedes poner y sacar cosas (valores) cuando lo necesites. Por ejemplo, puedes tener una variable llamada `edad` que almacena el valor `25`. Las variables son útiles para guardar información que necesitas usar o modificar más adelante en tu programa.
 
@@ -24,7 +24,7 @@ Cada «trozo» de memoria contiene realmente un objeto, de ahí que se diga que 
 
 - Un **valor** consistente con su tipo.
 
-![ilustración de las variables en python](object.jpg)
+![ilustración de las variables en python](./img/object.jpg)
 
 ### Declaración y Asignación
 

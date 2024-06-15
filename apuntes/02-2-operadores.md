@@ -12,9 +12,8 @@ En Python, los operadores se dividen en varias categorías:
 2. **De comparación:** Comparan dos valores y devuelven `True` o `False`.
 3. **Lógicos:** Operan sobre valores booleanos (`True` o `False`).
 4. **De asignación:** Asignan valores a las variables.
-5. **Bit a bit (bitwise):** Realizan operaciones a nivel de bits.
-6. **De identidad:** Verifican si dos objetos son idénticos.
-7. **De membresía:** Verifican si un valor pertenece a una secuencia (como una lista, tupla, etc.).
+5. **De identidad:** Verifican si dos objetos son idénticos.
+6. **De membresía:** Verifican si un valor pertenece a una secuencia (como una lista, tupla, etc.).
 
 ### Sintaxis y Ejemplos
 
@@ -233,44 +232,6 @@ print(not "hello")  # Devuelve False
   n **= 3  # n = 0.0
   ```
 
-#### Operadores Bit a Bit
-
-- **Y (`&`):** Realiza una operación AND a nivel de bits.
-
-  ```python
-  o = 5 & 3  # o = 1
-  ```
-
-- **O (`|`):** Realiza una operación OR a nivel de bits.
-
-  ```python
-  p = 5 | 3  # p = 7
-  ```
-
-- **XOR (`^`):** Realiza una operación XOR a nivel de bits.
-
-  ```python
-  q = 5 ^ 3  # q = 6
-  ```
-
-- **NOT (`~`):** Invierte los bits del operando.
-
-  ```python
-  r = ~5  # r = -6
-  ```
-
-- **Desplazamiento a la izquierda (`<<`):** Desplaza los bits del operando a la izquierda.
-
-  ```python
-  s = 5 << 1  # s = 10
-  ```
-
-- **Desplazamiento a la derecha (`>>`):** Desplaza los bits del operando a la derecha.
-
-  ```python
-  t = 5 >> 1  # t = 2
-  ```
-
 #### Operadores de Identidad
 
 - **Es (`is`):** Verifica si dos referencias apuntan al mismo objeto.
@@ -310,8 +271,4 @@ La jerarquía (o precedencia) de operadores determina el orden en que las operac
 | `+x`, `-x`, `~x`                                | Signo positivo, signo negativo, bitwise NOT |
 | `*`, `/`, `//`, `%`                             | Multiplicación, división, división entera, módulo |
 | `+`, `-`                                        | Suma, resta                              |
-| `<<`, `>>`                                      | Desplazamiento a la izquierda, derecha   |
-| `&`                                             | AND a nivel de bits                      |
-| `^`                                             | XOR a nivel de bits                      |
-| `|`                                             | OR a nivel de bits                       |
 | `in`, `not in`, `is`, `is not`, `<`, `<=`, `>`, `>=`, `!=`, `==` | Operadores de comparación, identidad, y

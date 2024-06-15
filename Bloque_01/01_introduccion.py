@@ -1,9 +1,14 @@
+#Ejercicios y ejemplos de las sesiones
 
-#! TIPOS DE DATOS
+#>>> TIPOS DE DATOS
 
-"Hola",""," ","1234"
+"""
+* Los datos en programación, son estructuras que clasifican la información que nos sera util. En cada lenguaje se construyen y se definen de diferentes formas.
+* En python existen muchas de estas, pero las mas importantes son estas:
+"""
 
-#? STRING
+#? STRING | str | cadena de caracteres
+#Es quel contenido que esta en comillas dobles o simples
 "Vivo en 'el Salvador'"
 'Vivo en "el Salvador"'
 

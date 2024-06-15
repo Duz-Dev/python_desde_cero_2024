@@ -53,10 +53,5 @@ estudiante = input("Ingresa tu nombre:\n") #-> STRING
 
 print("Estudiante>>>",estudiante)
 
-#! OPERADORES
-
-# = asignacion
-# , operador de separacion
-# ()
 
 
