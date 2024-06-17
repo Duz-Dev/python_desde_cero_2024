@@ -2,7 +2,19 @@
 
 ![img: Tipos de datos](https://i.postimg.cc/htBKShRQ/tema-py-02.png)
 
-> *Repositorio*: [python_desde_cero_2024](https://github.com/Duz-Dev/python_desde_cero_2024) - fecha: 14/06/2024
+> *Repositorio*: [python_desde_cero_2024](https://github.com/Duz-Dev/python_desde_cero_2024) - fecha: 17/06/2024
+---
+<!-- TOC -->
+
+- [Tipos de datos](#tipos-de-datos)
+  - [¿Qué es un datos?](#qué-es-un-datos)
+  - [Definición](#definición)
+  - [Tipos](#tipos)
+  - [Menciones Honorificas](#menciones-honorificas)
+  - [Amplia tus conocimientos](#amplia-tus-conocimientos)
+
+<!-- TOC -->
+---
 
 ## ¿Qué es un datos?
 
@@ -10,7 +22,7 @@ En programación, un dato es cualquier tipo de información que puedes almacenar
 
 En términos mas técnicos, un dato es una representación simbólica de información que puede ser almacenada, manipulada y transmitida por un programa. Los datos pueden ser de diferentes tipos, como numéricos, textuales, lógicos, etc.
 
-En Python, siendo un lenguaje de programación de alto nivel y dinámicamente tipado [¹], gestiona los datos mediante objetos. Todo en Python es un objeto, incluidas las variables y los valores primitivos.
+En Python, siendo un lenguaje de programación de alto nivel y dinámicamente tipado [^1], gestiona los datos mediante objetos. Todo en Python es un objeto, incluidas las variables y los valores primitivos.
 
 En Python, los datos se definen mediante clases y tipos incorporados. Cuando asignas un valor a una variable, Python automáticamente crea un objeto de la clase correspondiente para ese tipo de dato y gestiona la memoria para almacenar este valor. Por ejemplo, al asignar `x = 5`, Python crea un objeto entero con el valor 5.
 
@@ -71,16 +83,16 @@ A continuación mostrare de manera mas detallada cada uno de estos:
 
    Python no permite escribir este tipo de dato anidando comillas del mismo tipo.
 
-      ```python
-      #Esto no es valido
-      mensaje = "Vivo en "mexico""
-      #Esto es correcto
-      mensaje = 'Vivo en "mexico"'
-      #Posible solución
-      mensaje = "Vivo en \"mexico\""
-      ```
+   ```python
+   #Esto no es valido
+   mensaje = "Vivo en "mexico""
+   #Esto es correcto
+   mensaje = 'Vivo en "mexico"'
+   #Posible solución
+   mensaje = "Vivo en \"mexico\""
+   ```
 
-   En el ultimo caso, si funciona, esto debido a que el carácter `\` en Python se conoce como el carácter de escape[²]. Se utiliza para introducir secuencias de escape en cadenas de texto y para continuar líneas de código largas en la siguiente línea.
+   En el ultimo caso, si funciona, esto debido a que el carácter `\` en Python se conoce como el carácter de escape[^2]. Se utiliza para introducir secuencias de escape en cadenas de texto y para continuar líneas de código largas en la siguiente línea.
 
    Otras características aplicables a este tipo de datos es la `concatenación` que no es mas que el acto de unir strings mediante el operador `+`. También es posible multiplicar los strings con el operador `*` y sera equivalente a escribir seguidamente el mismo texto uno detrás de otro.
 
@@ -99,12 +111,12 @@ A continuación mostrare de manera mas detallada cada uno de estos:
    es_falso = False
    ```
 
-   En Python, ciertos valores se consideran equivalentes a False cuando se evalúan en un contexto booleano, como en una condición if o en un operador lógico. Estos valores se conocen comúnmente como "falsy" o "valores falsos".Algunos de estos serian el valor `None`,el numero cero `0`,cadena vacía `""` o `''`,lista vacía `[]`,tupla vacía `()`,`range(0)`, diccionario vació `{}`,conjunto vació `set()`,bytes vacío `b''`.
-
+   En Python, ciertos valores se consideran equivalentes a False cuando se evalúan en un contexto booleano, como en una condición if o en un operador lógico. Estos valores se conocen comúnmente como "falsy" o "valores falsos". Algunos de estos serian el valor `None`, el numero cero `0`, cadena vacía `""` o `''`, lista vacía `[]`, tupla vacía `()`,`range(0)`, diccionario vació `{}`, conjunto vació `set()`, bytes vacío `b''`.
 5. **Listas (`list`):** Las listas son colecciones ordenadas y mutables de elementos. Pueden contener elementos de cualquier tipo y son instancias de la clase `list`.
 
    ```python
    numeros = [1, 2, 3, 4, 5]
+   valores = ["hola", 10, 14.5, numeros, [1,2,3], {'clave':'valor'}, () ]
    ```
 
 6. **Tuplas (`tuple`):** Las tuplas son similares a las listas, pero son inmutables. Una vez creadas, no pueden ser modificadas. Son instancias de la clase `tuple`.
@@ -124,6 +136,16 @@ A continuación mostrare de manera mas detallada cada uno de estos:
    ```python
    estudiante = {"nombre": "Juan", "edad": 20, "carrera": "Computación"}
    ```
+
+En el siguiente tema definiré a que me refiero cuando algunos datos son mutables y otros no, pero de momento ten en cuenta la siguiente tabla:
+
+| Inmutable| Mutable     |
+| ------- | -------- |
+|bool     | list  |
+|int      | set   |
+|float    |dict   |
+|str      | |
+|tuple  |   |
 
 ## Menciones Honorificas
 
@@ -156,13 +178,10 @@ fs = frozenset([1, 2, 3, 4])
 print(fs)  # Salida: frozenset({1, 2, 3, 4})
 ```
 
-### Amplia tus conocimientos
-
-[¹]: #amplia-tus-conocimientos "tooltip"
-[²]: #amplia-tus-conocimientos "tooltip"
-
-[1] Un lenguaje de programación es dinámicamente tipado si una variable puede tomar valores de distintos tipos.
-
-[2] Este es un tema mas ampleo que puedes consultar en el siguente [enlace](https://www.freecodecamp.org/espanol/news/secuencias-de-escape-en-python).
+## Amplia tus conocimientos
 
 Visita: [Aprendepython.es](https://aprendepython.es/core/datatypes/) para conocer mas de tipos de datos.
+
+[^1]: Un lenguaje de programación es dinámicamente tipado si una variable puede tomar valores de distintos tipos.
+
+[^2]: Este es un tema mas ampleo que puedes consultar en el siguente [enlace](https://www.freecodecamp.org/espanol/news/secuencias-de-escape-en-python).

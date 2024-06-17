@@ -1,7 +1,23 @@
 # Función print()
 
-> *Repositorio*: [python_desde_cero_2024](https://github.com/Duz-Dev/python_desde_cero_2024) - fecha: 3/06/2024
+![alt](https://i.postimg.cc/FHzTt9rD/image.png)
 
+> *Repositorio*: [python_desde_cero_2024](https://github.com/Duz-Dev/python_desde_cero_2024) - fecha de edición: 3/06/2024
+---
+<!-- TOC -->
+
+- [Función print()](#función-print)
+  - [Definición](#definición)
+  - [Argumento `file`](#argumento-file)
+    - [Detalles y Uso](#detalles-y-uso)
+    - [Ejemplo 1: Redirigir la salida a un archivo](#ejemplo-1-redirigir-la-salida-a-un-archivo)
+  - [Argumento `flush`](#argumento-flush)
+    - [Detalles y Uso](#detalles-y-uso-1)
+    - [Ejemplo 2: Forzar el vaciado del búfer](#ejemplo-2-forzar-el-vaciado-del-búfer)
+
+<!-- /TOC -->
+---
+<!-- >[!NOTE] -->
 > Esta función es nativa dentro de python y es la que utilizamos para mostrar información en la consola. El texto a continuación puede ser algo complejo si aun no conoces nada del tema de funciones, por lo que te recomendaría simplemente dar una leída y después compréndelo una vez ya hayas tocando el tema de funciones en este curso.
 
 ## Definición
@@ -41,18 +57,18 @@ print("Esto está en la misma línea.")
 # >>> Esto es una línea. Esto está en la misma línea
 ```
 
-### Argumento `file`
+## Argumento `file`
 
 El argumento `file` en la función `print()` determina hacia dónde se enviará la salida del texto que se imprima. Por defecto, este argumento está configurado en `sys.stdout`, que representa la consola estándar. Sin embargo, puedes cambiar este comportamiento para dirigir la salida a otro dispositivo, como un archivo de texto abierto en modo escritura.
 
-#### Detalles y Uso
+### Detalles y Uso
 
 - **Valor por defecto**: `sys.stdout`
 - **Posibles valores**:
   - `sys.stdout`: Consola estándar.
   - Objeto de archivo abierto: Puedes especificar un objeto de archivo que se haya abierto previamente en modo escritura (`'w'` o `'a'`).
 
-#### Ejemplo 1: Redirigir la salida a un archivo
+### Ejemplo 1: Redirigir la salida a un archivo
 
 ```python
 # Abre un archivo en modo escritura
@@ -68,18 +84,18 @@ En este ejemplo:
 - Se utiliza `print()` con el argumento `file=f` para redirigir la salida al archivo `output.txt`.
 - Los mensajes especificados se escriben en el archivo en lugar de mostrarse en la consola.
 
-### Argumento `flush`
+## Argumento `flush`
 
 El argumento `flush` en la función `print()` controla si el búfer de salida debe vaciarse inmediatamente después de imprimir los mensajes. El búfer es una región de memoria utilizada para almacenar temporalmente datos antes de enviarlos a su destino final (como la consola o un archivo).
 
-#### Detalles y Uso
+### Detalles y Uso
 
 - **Valor por defecto**: `False`
 - **Posibles valores**:
   - `True`: Vacía el búfer inmediatamente después de imprimir.
   - `False`: Permite que el búfer se vacíe de manera automática según las políticas de optimización de Python.
 
-#### Ejemplo 2: Forzar el vaciado del búfer
+### Ejemplo 2: Forzar el vaciado del búfer
 
 ```python
 print("Mensaje 1")

@@ -4,7 +4,7 @@
 
 Como recomendación si es la primera vez que entraras a python, es que aprendas las bases de dicho lenguaje con ayuda de otros recursos como lo es el sitio de [AprendePython.es](https://aprendepython.es/) y sobre todo la [documentación oficial de python](https://docs.python.org/es/3/).
 
-En caso de tener dudas sobre algun tema en especifico, puedes unirte a nuestra [comunidad de Discord![FrontEnd | Sin Fronteras](https://i.postimg.cc/vZx9tjXC/image.png)](https://discord.gg/w3cTzZT3QQ)
+En caso de tener dudas sobre algun tema en especifico, puedes unirte a nuestra [comunidad de Discord![FrontEnd | Sin Fronteras](https://i.postimg.cc/vZx9tjXC/image.png)](https://discord.gg/Rfzr3pMkr2)
 
 >Nota: La version de python que utilice en dicho curso es **Python 3.12.2**
 

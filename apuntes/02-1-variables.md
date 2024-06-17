@@ -3,6 +3,19 @@
 ![img: Tipos de datos](https://i.postimg.cc/MTV6VRrV/imagen.png)
 
 > *Repositorio*: [python_desde_cero_2024](https://github.com/Duz-Dev/python_desde_cero_2024) - fecha: 3/06/2024
+---
+<!-- TOC -->
+- [Variables](#variables)
+  - [¿Qué es un variable?](#qué-es-un-variable)
+  - [Definición](#definición)
+    - [Declaración y Asignación](#declaración-y-asignación)
+    - [Sintaxis](#sintaxis)
+    - [Asignación de valores](#asignación-de-valores)
+    - [Identificadores, Valores y Tipos de Datos](#identificadores-valores-y-tipos-de-datos)
+    - [Reglas para Nombres de Variables](#reglas-para-nombres-de-variables)
+  - [Amplia tus conocimientos](#amplia-tus-conocimientos)
+<!-- /TOC -->
+---
 
 ## ¿Qué es un variable?
 
@@ -24,7 +37,8 @@ Cada «trozo» de memoria contiene realmente un objeto, de ahí que se diga que 
 
 - Un **valor** consistente con su tipo.
 
-![ilustración de las variables en python](./img/object.jpg)
+<center><img src="./img/object.jpg" alt="alt" width="500"/></center>
+
 
 ### Declaración y Asignación
 
@@ -38,7 +52,7 @@ La sintaxis para declarar y asignar una variable en Python es sencilla. Se usa e
 #ejemplo
 variable = "valor"
 
-x = 10  # Aquí, 'x' se declara y se le asigna el valor 10
+x = 0  # Aquí, 'x' se declara y se le asigna el valor 10
 nombre = "Juan"  # 'nombre' se declara y se le asigna el valor "Juan"
 ```
 
@@ -94,7 +108,7 @@ print(type(x))  # Tipo de dato del objeto
 
 > nota: Puedes ver todas las palabras reservadas (keywords) de python con la función `help('keywords')`
 
-> Observación: Los nombres de variables son «case-sensitive» [¹]. Por ejemplo, stuff y Stuff son nombres diferentes.
+> Observación: Los nombres de variables son «case-sensitive» [^1]. Por ejemplo, stuff y Stuff son nombres diferentes.
 
 Entre los programadores tenemos convenciones para nombrar elementos en nuestro código, aparte de lo que el propio lenguaje dicte, de esta manera sera mas legible y entendible entre nosotros lo que otros hacen.
 A continuación en listare algunos puntos mas a tener en cuenta al menos en python:
@@ -132,10 +146,8 @@ MY_NAME = "Juan"
 
 - Usar adjetivos para booleanos (ejemplo ``available``)
 
-### Amplia tus conocimientos
+## Amplia tus conocimientos
 
-[¹]: #amplia-tus-conocimientos "tooltip"
-
-[1] Sensible a cambios en mayúsculas y minúsculas.
+[^1]: Sensible a cambios en mayúsculas y minúsculas.
 
 Visita: [Aprendepython.es](https://aprendepython.es/core/datatypes/data/#variables) para conocer mas de tipos de datos.
