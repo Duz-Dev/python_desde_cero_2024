@@ -59,6 +59,8 @@ x = 0  # Aquí, 'x' se declara y se le asigna el valor 10
 nombre = "Juan"  # 'nombre' se declara y se le asigna el valor "Juan"
 ```
 
+>[!NOTE]
+>Existe un operador parecido a el de asignación `=` el cual se le conoce como "walrus" `:=` (operador morza en español). Este permite asignar el valor de una variable y luego usarlo en una sola expresión. Este te lo platicare un poco mas adelante.
 ### Asignación de valores
 
 Python no solo tiene una forma de asignar los valores, también soporta otras formas de asignación, como la asignación múltiple y el desempaquetado de tuplas o listas:

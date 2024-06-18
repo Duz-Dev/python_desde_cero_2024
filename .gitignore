@@ -1,4 +1,5 @@
 #Ignora archivos
-
+apuntes/*.pdf
+pdf
 #Ignora carpetas
 EXTRAS

@@ -5,28 +5,23 @@
 > *Repositorio*: [python_desde_cero_2024](https://github.com/Duz-Dev/python_desde_cero_2024) - fecha de edición: 14/06/2024
 ---
 <!-- TOC -->
-
 - [Controles de flujo](#controles-de-flujo)
-    - [if](#if)
-    - [if...else](#ifelse)
-    - [if...elif...else](#ifelifelse)
+  - [Estructuras Condicionales](#estructuras-condicionales)
     - [Reglas y Consideraciones](#reglas-y-consideraciones)
-    - [Ejemplos](#ejemplos)
+    - [Ejemplos condicionales](#ejemplos-condicionales)
   - [Match](#match)
     - [Definición](#definición)
     - [Sintaxis](#sintaxis)
-    - [Ejemplos](#ejemplos-1)
     - [Reglas y Consideraciones](#reglas-y-consideraciones-1)
+    - [Ejemplos match](#ejemplos-match)
     - [Guards (protecciones)](#guards-protecciones)
-      - [Ejemplos](#ejemplos-2)
       - [Funcionamiento de los Guards](#funcionamiento-de-los-guards)
-    - [Sintaxis](#sintaxis-1)
-    - [Ejemplo Explicado](#ejemplo-explicado)
-    - [Ejemplo Básico Adicional](#ejemplo-básico-adicional)
-
-<!-- /TOC -->o Básico Adicional](#ejemplo-básico-adicional)
+      - [Ejemplos de Guard](#ejemplos-de-guard)
 
 <!-- /TOC -->
+
+## Estructuras Condicionales
+
 Las estructuras de control condicionales son constructos en los lenguajes de programación que permiten ejecutar bloques de código diferentes dependiendo de ciertas condiciones.
 
 Las condicionales en Python permiten ejecutar código basado en condiciones booleanas. Las tres principales estructuras condicionales son `if`, `elif` (else if) y `else`. A continuación, se detalla cómo funcionan cada una de ellas:
@@ -38,8 +33,6 @@ Las condicionales en Python permiten ejecutar código basado en condiciones bool
 Ten en cuenta que cualquiera de estas estructuras que veremos, trabajan con el principio de indentación entre los bloques y expresiones.
 
 Cuando creas un condicional o una estructura en python, le indicamos a este que el código que le sigue trabajara bajo el contexto del la estructura, en pocas palabras, este código se ejecutara, siempre y cuando dicha estructura sea activada.
-
-### if
 
 La estructura `if` evalúa una condición. Si la condición es verdadera (True), se ejecuta el bloque de código siguiente.
 
@@ -59,8 +52,6 @@ if edad >= 18:
     print("Eres mayor de edad")
 ```
 
-### if...else
-
 El uso de `if` junto con `else` permite ejecutar un bloque de código alternativo si la condición es falsa (False).
 
 ```python
@@ -79,8 +70,6 @@ if edad >= 18:
 else:
     print("Eres menor de edad")
 ```
-
-### if...elif...else
 
 La estructura `if...elif...else` permite evaluar múltiples condiciones en secuencia. La primera condición verdadera ejecutará su bloque de código, y las condiciones posteriores serán ignoradas.
 
@@ -112,7 +101,7 @@ else:
 - **Else**: El bloque `else` es opcional y solo puede haber uno por estructura condicional.
 - **Elif**: Puedes tener múltiples `elif` en una estructura condicional para manejar varias condiciones.
 
-### Ejemplos
+### Ejemplos condicionales
 
 Podemos expresar múltiples expresiones a la vez.
 
@@ -161,7 +150,13 @@ match valor:
 >[!NOTE]
 > el `_` se utiliza en varios contextos, la intención detrás de su uso es siempre la misma: ignorar valores que no son necesarios. En el caso del match, se utiliza como un comodín para coincidir con cualquier valor no especificado por otros patrones. Este amiguito no lo vamos a topar en muchos otros escenarios.
 
-### Ejemplos
+### Reglas y Consideraciones
+
+- **Patrones**: Los patrones pueden ser valores literales, variables, tuplas, listas, diccionarios, entre otros.
+- **Guardias**: Se pueden usar guardias (`if`) para agregar condiciones adicionales a los patrones.
+- **Wildcard**: El patrón `_` actúa como un comodín y coincide con cualquier valor, similar a `default` en un `switch`.
+
+### Ejemplos match
 
 Coincidencia con valores literales (string)
 
@@ -222,12 +217,7 @@ print(procesar_lista([42]))  # Salida: Lista con un solo elemento: 42
 print(procesar_lista([1, 2]))  # Salida: Lista con dos elementos: 1 y 2
 print(procesar_lista([1, 2, 3]))  # Salida: Lista con más de dos elementos
 ```
-
-### Reglas y Consideraciones
-
-- **Patrones**: Los patrones pueden ser valores literales, variables, tuplas, listas, diccionarios, entre otros.
-- **Guardias**: Se pueden usar guardias (`if`) para agregar condiciones adicionales a los patrones.
-- **Wildcard**: El patrón `_` actúa como un comodín y coincide con cualquier valor, similar a `default` en un `switch`.
+Existen otras estructuras que como vez pueden elevar la complejidad del código, ya es a criterio de cada persona explorar las utilidades de match.
 
 ### Guards (protecciones)
 
@@ -244,7 +234,83 @@ case patrón if expresión_booleana:
     # código a ejecutar si el patrón y la expresión booleana coinciden
 ```
 
-#### Ejemplos
+Digamos que queremos crear un menú en el cual se ingrese en base a ciertas condiciones.
+Un ejemplo seria como este:
+
+```python
+def menu(opcion, edad):
+    match opcion:
+        case 1 if edad == 18:
+            print("La persona puede conducir.")
+        case 2 if edad < 18:
+            print("Aún no tienes la edad para conducir.")
+        case 3 | _:
+            print("Datos no válidos")
+
+# Solicitar la edad del usuario
+edad = int(input("Ingrese su edad: "))
+
+# Solicitar la opción del menú
+opcion = int(input("Ingrese una opción del menú (1, 2, 3): "))
+
+# Ejecutar el menú
+menu(opcion, edad)
+
+```
+
+**Explicación**. Posiblemente esto te parezca algo confuso, deja te explico el proceso que sigue este código:
+
+1. Función `menu` con parámetros `opcion` y `edad`:
+
+    - La función menu toma dos argumentos que le proporcionemos, en este caso seran los inputs opcion y edad.
+
+2. Uso de ``match`` y ``case`` con guard:
+
+    - Primer case: ``case 1 if edad == 18``:
+        - Este caso se activa si opcion es 1 y edad es igual a 18.
+        - Imprime "La persona puede conducir."
+    - Segundo case: ``case 2 if edad < 18``:
+        - Este caso se activa si opcion es 2 y edad es menor que 18.
+        - Imprime "Aún no tienes la edad para conducir."
+    - Tercer case: case 3 | _:
+        - Este caso se activa si opcion es 3 o cualquier otro valor (_ es el comodín).
+        - Imprime "Datos no válidos."
+
+**Importante aclaracion:**
+El operador `|` y el operador `or` en Python tienen diferencias fundamentales en cuanto a su uso y comportamiento, por lo que no podemos utilizarlos de manera equivalente como en otros lenguajes.
+
+En el contexto de `match` en Python, el operador `|` se utiliza para separar múltiples patrones en un mismo caso, actuando como una "OR" para patrones. No es lo mismo que el operador lógico `or`.
+
+```python
+def clasificar_opcion(opcion):
+    match opcion:
+        case 1 | 2 | 3:
+            print("Opción válida")
+        case _:
+            print("Opción no válida")
+
+clasificar_opcion(1)  # Opción válida
+clasificar_opcion(4)  # Opción no válida
+```
+
+En este ejemplo, el operador `|` se usa para combinar los patrones `1`, `2` y `3`, indicando que cualquier valor que sea igual a `1`, `2` o `3` coincide con este caso.
+
+1. **Contexto:**
+   - `|`: Utilizado para operaciones bitwise o para combinar patrones en un `match`.
+   - `or`: Utilizado en expresiones lógicas para evaluar condiciones booleanas.
+
+2. **Funcionamiento:**
+   - `|`: Opera a nivel de bits en números enteros o combina patrones en un `match`.
+   - `or`: Evalúa expresiones booleanas y devuelve el primer valor que sea `True` o el último valor si ninguno es `True`.
+
+#### Funcionamiento de los Guards
+
+1. **Evaluación del Patrón**: Primero, se evalúa si el valor coincide con el patrón del `case`.
+2. **Evaluación del Guard**: Si el patrón coincide, se evalúa la expresión booleana del guard.
+3. **Ejecución del Código**: Si el guard se evalúa como `True`, se ejecuta el bloque de código correspondiente. Si se evalúa como `False`, se pasa al siguiente `case`.
+4. **Excepciones**: Si el guard produce una excepción durante su evaluación, la excepción se propaga y no se selecciona el bloque `case`.
+
+#### Ejemplos de Guard
 
 Veamos un ejemplo muy sencillo para comprender mejor su uso:
 
@@ -268,7 +334,7 @@ print(clasificar_numero(10))  # Salida: Número positivo
 print(clasificar_numero(None))  # Salida: Valor desconocido
 ```
 
-En este ejemplo:
+En este ejemplo, `x` se convierte en una variable que toma el valor de ``numero`` en cada línea de coincidencia.
 
 - `case x if x < 0:` coincide si `numero` es menor que 0.
 - `case x if x == 0:` coincide si `numero` es igual a 0.
@@ -318,70 +384,7 @@ print(clasificar_nota(45))  # Salida: Reprobado
 print(clasificar_nota(None))  # Salida: Nota desconocida
 ```
 
-#### Funcionamiento de los Guards
-
-1. **Evaluación del Patrón**: Primero, se evalúa si el valor coincide con el patrón del `case`.
-2. **Evaluación del Guard**: Si el patrón coincide, se evalúa la expresión booleana del guard.
-3. **Ejecución del Código**: Si el guard se evalúa como `True`, se ejecuta el bloque de código correspondiente. Si se evalúa como `False`, se pasa al siguiente `case`.
-4. **Excepciones**: Si el guard produce una excepción durante su evaluación, la excepción se propaga y no se selecciona el bloque `case`.
-
-
-
-
-Un guard es una expresión condicional que se usa junto con la coincidencia de patrones en la estructura `match`.
-La sintaxis para un guard es `case patrón if expresión_booleana:`.
-La idea es que primero se evalúa si el valor coincide con el patrón del `case`, y si es así, se evalúa la expresión booleana (guard). Si el guard evalúa a `True`, se ejecuta el bloque de código correspondiente; de lo contrario, se pasa al siguiente `case`.
-
-Cuando usamos un patrón como `x` en el `match`, `x` se convierte en una variable de captura que toma el valor del objeto que estamos evaluando. Así, en el caso de `case x if x < 0:`, `x` toma el valor de `numero` y se evalúa la condición `x < 0`.
-
-### Sintaxis
-
-La sintaxis para un guard es la siguiente:
-```python
-case patrón if expresión_booleana:
-    # código a ejecutar si el patrón y la expresión booleana coinciden
-```
-
-### Ejemplo Explicado
-
-Tomemos el ejemplo anterior y expliquémoslo en detalle:
-
-```python
-def clasificar_numero(numero):
-    match numero:
-        case x if x < 0:
-            return "Número negativo"
-        case x if x == 0:
-            return "Cero"
-        case x if x > 0:
-            return "Número positivo"
-        case _:
-            return "Valor desconocido"
-
-print(clasificar_numero(-5))  # Salida: Número negativo
-print(clasificar_numero(0))   # Salida: Cero
-print(clasificar_numero(10))  # Salida: Número positivo
-print(clasificar_numero(None))  # Salida: Valor desconocido
-```
-
-- `case x if x < 0:`:
-  - `x` captura el valor de `numero`.
-  - Si `x` es menor que 0, se devuelve "Número negativo".
-- `case x if x == 0:`:
-  - `x` captura el valor de `numero`.
-  - Si `x` es igual a 0, se devuelve "Cero".
-- `case x if x > 0:`:
-  - `x` captura el valor de `numero`.
-  - Si `x` es mayor que 0, se devuelve "Número positivo".
-- `case _:`:
-  - `_` es un patrón comodín que coincide con cualquier valor.
-  - Si ningún otro caso coincide, se devuelve "Valor desconocido".
-
-En resumen, `x` actúa como una variable que captura el valor de `numero`, y el guard (condición `if`) determina si se ejecuta el bloque de código correspondiente.
-
-### Ejemplo Básico Adicional
-
-Aquí tienes otro ejemplo para clarificar el uso de guards:
+**Ejemplo 4**. Patrón de tamaño de texto
 
 ```python
 def clasificar_texto(texto):
@@ -411,6 +414,3 @@ En este ejemplo:
 - `case t if len(t) >= 5:`:
   - `t` captura el valor de `texto`.
   - Si la longitud de `t` es 5 o mayor, se devuelve "Texto largo".
-- `case _:`:
-  - `_` es un patrón comodín que coincide con cualquier valor.
-  - Si ningún otro caso coincide, se devuelve "Texto desconocido".

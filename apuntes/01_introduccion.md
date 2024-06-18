@@ -4,9 +4,21 @@
 
 > *Repositorio*: [python_desde_cero_2024](https://github.com/Duz-Dev/python_desde_cero_2024) - fecha de edición: 16/05/2024
 ---
-<!-- TOC -->
+Antes de comenzar de lleno en este repositorio, es requisito que tengas a la mano las siguientes herramientas y conocimientos:
 
+- ¿Qué es un lenguaje de programación?
+- ¿Qué es Python?
+- Interpretador vs compilador
+- Editor de código
+- ¿Qué es una terminal? (utilización básica)
+
+También, en caso de que Python sea el primer lenguaje de programación con el cual tengas contacto, seria muy recomendable que primero abordes algunos conceptos y temas de "lógica de programación". Entender lo que son las variables, tipos de dato, condicionales, ciclos, ect. De lo contrario te sera mucho mas difícil comprender lo que empezaremos abordar de aquí en adelante
+
+## Contenido
+
+<!-- TOC ignore:true -->
 - [Introducción a Python](#introducción-a-python)
+  - [Contenido](#contenido)
   - [Origen de Python y su Propuesta](#origen-de-python-y-su-propuesta)
     - [Características Clave de Python](#características-clave-de-python)
     - [Comparación con Otros Lenguajes](#comparación-con-otros-lenguajes)
@@ -36,30 +48,7 @@
   - [Amplia tus conocimientos](#amplia-tus-conocimientos)
 
 <!-- /TOC -->
-        - [2. Longitud de la Línea](#2-longitud-de-la-línea)
-        - [3. Saltos de Línea](#3-saltos-de-línea)
-        - [4. Importaciones](#4-importaciones)
-        - [5. Espacios en Blanco](#5-espacios-en-blanco)
-        - [6. Nomenclatura](#6-nomenclatura)
-        - [7. Comentarios](#7-comentarios)
-        - [8. Docstrings](#8-docstrings)
-        - [9. Declaraciones](#9-declaraciones)
-        - [10. Espacios de nombres](#10-espacios-de-nombres)
-
-- [Amplia tus conocimientos](#amplia-tus-conocimientos)
-
-<!-- /TOC -->
-<!-- /TOC -->
 ---
-Antes de comenzar de lleno en este repositorio, es requisito que tengas a la mano las siguientes herramientas y conocimientos:
-
-- ¿Qué es un lenguaje de programación?
-- ¿Qué es Python?
-- Interpretador vs compilador
-- Editor de código
-- ¿Qué es una terminal? (utilización básica)
-
-También, en caso de que Python sea el primer lenguaje de programación con el cual tengas contacto, seria muy recomendable que primero abordes algunos conceptos y temas de "lógica de programación". Entender lo que son las variables, tipos de dato, condicionales, ciclos, ect. De lo contrario te sera mucho mas difícil comprender lo que empezaremos abordar de aquí en adelante.
 
 ## Origen de Python y su Propuesta
 

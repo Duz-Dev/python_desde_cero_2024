@@ -7,10 +7,31 @@
 <!-- TOC -->
 
 - [Tipos de datos](#tipos-de-datos)
+  - [Definición](#definición)
+  - [Tipos](#tipos)
   - [Menciones Honorificas](#menciones-honorificas)
   - [Amplia tus conocimientos](#amplia-tus-conocimientos)
 
 <!-- /TOC -->
+
+## Definición
+
+En programación, un dato es cualquier tipo de información que puedes almacenar y manipular en tu programa. Puede ser un número, una palabra, una lista de cosas, o incluso algo más complejo como la información de un estudiante. Los datos son los bloques básicos con los que trabajas cuando creas programas.
+
+En términos mas técnicos, un dato es una representación simbólica de información que puede ser almacenada, manipulada y transmitida por un programa. Los datos pueden ser de diferentes tipos, como numéricos, textuales, lógicos, etc.
+
+En Python, siendo un lenguaje de programación de alto nivel y dinámicamente tipado [^1], gestiona los datos mediante objetos. Todo en Python es un objeto, incluidas las variables y los valores primitivos.
+
+En Python, los datos se definen mediante clases y tipos incorporados. Cuando asignas un valor a una variable, Python automáticamente crea un objeto de la clase correspondiente para ese tipo de dato y gestiona la memoria para almacenar este valor. Por ejemplo, al asignar `x = 5`, Python crea un objeto entero con el valor 5.
+
+En Python, un dato como cualquier entidad que puede ser almacenada en la memoria y manipulada por el programa. Los datos en Python están estructurados como objetos de diversas clases incorporadas, tales como `int`, `float`, `str`, `list`, `dict`, `set`, `tuple` y `bool`.
+
+## Tipos
+
+A continuación mostrare de manera mas detallada cada uno de estos:
+
+1. **Enteros (`int`):** Python usa una representación de enteros que permite almacenar números de tamaño arbitrario, solo limitado por la memoria disponible. Los enteros en Python son objetos de la clase `int`. Se plasman escribiendo directamente el numero.
+
    ```python
    a = 10
    b = -5
@@ -19,7 +40,7 @@
 2. **Flotantes (`float`):** Los números de punto flotante son aquellos que comúnmente conocemos como decimales. En Python siguen el estándar IEEE 754 de doble precisión, que usa 64 bits para representar el número. Los flotantes son instancias de la clase `float`.
 
    ```python
-   pi = 3.14159
+   PI = 3.14159
    decimal = -.023
    uno = 0.99999999
    ```
@@ -86,7 +107,7 @@
    es_falso = False
    ```
 
-   En Python, ciertos valores se consideran equivalentes a False cuando se evalúan en un contexto booleano, como en una condición if o en un operador lógico. Estos valores se conocen comúnmente como "falsy" o "valores falsos". Algunos de estos serian el valor `None`, el numero cero `0`, cadena vacía `""` o `''`, lista vacía `[]`, tupla vacía `()`,`range(0)`, diccionario vació `{}`, conjunto vació `set()`, bytes vacío `b''`.
+   En Python, ciertos valores se consideran equivalentes a False cuando se evalúan en un contexto booleano, como en una condición if o en un operador lógico. Estos valores se conocen comúnmente como "falsy" o "valores falsos". Algunos de estos serian el valor `None`, el numero cero `0`, cadena vacía `""` o `''`, lista vacía `[]`, tupla vacía `()`, `range(0)`, diccionario vació `{}`, conjunto vació `set()`, bytes vacío `b''`.
 5. **Listas (`list`):** Las listas son colecciones ordenadas y mutables de elementos. Pueden contener elementos de cualquier tipo y son instancias de la clase `list`.
 
    ```python
@@ -112,7 +133,7 @@
    estudiante = {"nombre": "Juan", "edad": 20, "carrera": "Computación"}
    ```
 
-En el siguiente tema definiré a que me refiero cuando algunos datos son mutables y otros no, pero de momento ten en cuenta la siguiente tabla:
+En el siguiente tema definiré a que me refiero cuando algunos datos son mutables y otros no, asi como el tema de las instancias, pero de momento ten en cuenta la siguiente tabla:
 
 |Inmutable|Mutable|
 |---------|-------|
