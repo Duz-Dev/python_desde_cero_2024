@@ -1,10 +1,32 @@
-# Operadores en Python y su Jerarquía
+# Operadores
 
-## ¿Qué es un operador?
+![img: Tipos de datos](https://i.postimg.cc/pXWwQLbP/imagen.png)
 
-Un operador en Python es un símbolo que indica una operación a realizar sobre uno o más operandos. Los operadores permiten realizar cálculos aritméticos, comparaciones, operaciones lógicas, entre otros. Por ejemplo, el operador `+` se usa para sumar dos números.
+> *Repositorio*: [python_desde_cero_2024](https://github.com/Duz-Dev/python_desde_cero_2024) - fecha de edición: 17/06/2024
+
+<!-- TOC -->
+
+- [Operadores](#operadores)
+  - [Definición](#definición)
+  - [Operadores Aritméticos](#operadores-aritméticos)
+  - [Operadores de Comparación](#operadores-de-comparación)
+  - [Operadores Lógicos](#operadores-lógicos)
+    - [Operador `and`](#operador-and)
+    - [Operador `or`](#operador-or)
+    - [Operador `not`](#operador-not)
+    - [Ejemplos](#ejemplos)
+  - [Operadores de Asignación](#operadores-de-asignación)
+  - [Operadores de Identidad](#operadores-de-identidad)
+  - [Operadores de Membresía](#operadores-de-membresía)
+  - [Jerarquía de Operadores](#jerarquía-de-operadores)
+    - [Operador walrus](#operador-walrus)
+  - [Amplia tus conocimientos](#amplia-tus-conocimientos)
+
+<!-- /TOC -->
 
 ## Definición
+
+Un operador en Python es un símbolo que indica una operación a realizar sobre uno o más operandos. Los operadores permiten realizar cálculos aritméticos, comparaciones, operaciones lógicas, entre otros. Por ejemplo, el operador `+` se usa para sumar dos números.
 
 En Python, los operadores se dividen en varias categorías:
 
@@ -15,11 +37,9 @@ En Python, los operadores se dividen en varias categorías:
 5. **De identidad:** Verifican si dos objetos son idénticos.
 6. **De membresía:** Verifican si un valor pertenece a una secuencia (como una lista, tupla, etc.).
 
-### Sintaxis y Ejemplos
 
-#### Operadores Aritméticos
+## Operadores Aritméticos
 
-- **Suma (`+`):** Suma dos operandos.
 
   ```python
   x = 5 + 3  # x = 8
@@ -61,7 +81,7 @@ En Python, los operadores se dividen en varias categorías:
   d = 5 ** 2  # d = 25
   ```
 
-#### Operadores de Comparación
+## Operadores de Comparación
 
 - **Igualdad (`==`):** Verifica si dos operandos son iguales.
 
@@ -99,7 +119,9 @@ En Python, los operadores se dividen en varias categorías:
   j = (5 <= 3)  # j = False
   ```
 
-#### Operadores Lógicos
+## Operadores Lógicos
+
+Los operadores lógicos `and`, `or`, y `not` se utilizan para realizar operaciones lógicas sobre valores. Estos operadores evalúan expresiones y devuelven uno de los valores de los operandos en lugar de simplemente `True` o `False`.
 
 - **Y (`and`):** Retorna `True` si ambos operandos son `True`.
 
@@ -121,11 +143,7 @@ En Python, los operadores se dividen en varias categorías:
 
 En este tipo de operadores hay que tener algo muy en cuenta, los operadores lógicos `and`, `or`, y `not` en Python no siempre devuelven un valor booleano (es decir, `True` o `False`). En su lugar, devuelven uno de los valores de los operandos. Vamos a ver cómo funciona esto en detalle:
 
-##### ¿Qué es el concepto?
-
-Los operadores lógicos `and`, `or`, y `not` se utilizan para realizar operaciones lógicas sobre valores. Estos operadores evalúan expresiones y devuelven uno de los valores de los operandos en lugar de simplemente `True` o `False`.
-
-##### Operador `and`
+### Operador `and`
 
 El operador `and` devuelve el primer operando si es falso; de lo contrario, devuelve el segundo operando. Esto significa que si el primer operando es un valor "falso" (como `0`, `None`, una cadena vacía, una lista vacía, etc.), ese valor será el resultado. Si el primer operando es verdadero, el resultado será el valor del segundo operando.
 
@@ -136,7 +154,7 @@ result = 0 and 5  # result será 0
 result = 3 and 5  # result será 5
 ```
 
-##### Operador `or`
+### Operador `or`
 
 El operador `or` devuelve el primer operando si es verdadero; de lo contrario, devuelve el segundo operando. Esto significa que si el primer operando es un valor "verdadero", ese valor será el resultado. Si el primer operando es falso, el resultado será el valor del segundo operando.
 
@@ -147,7 +165,7 @@ result = 0 or 5  # result será 5
 result = 3 or 5  # result será 3
 ```
 
-##### Operador `not`
+### Operador `not`
 
 El operador `not` siempre devuelve un valor booleano: `True` si el operando es falso, y `False` si el operando es verdadero.
 
@@ -158,7 +176,7 @@ result = not 0  # result será True
 result = not 3  # result será False
 ```
 
-##### Sintaxis y Ejemplos
+### Ejemplos
 
 Aquí hay más ejemplos para ilustrar cómo funcionan estos operadores:
 
@@ -182,7 +200,7 @@ print(not [])  # Devuelve True
 print(not "hello")  # Devuelve False
 ```
 
-#### Operadores de Asignación
+## Operadores de Asignación
 
 - **Asignación (`=`):** Asigna el valor del operando derecho al operando izquierdo.
 
@@ -232,7 +250,9 @@ print(not "hello")  # Devuelve False
   n **= 3  # n = 0.0
   ```
 
-#### Operadores de Identidad
+## Operadores de Identidad
+
+Estos están mas orientados para utilizarlos al momento de trabajar con clases e instancias. Aun asi, te hago mención de estos para que los conozcas.
 
 - **Es (`is`):** Verifica si dos referencias apuntan al mismo objeto.
 
@@ -246,7 +266,7 @@ print(not "hello")  # Devuelve False
   v = (5 is not 5)  # v = False
   ```
 
-#### Operadores de Membresía
+## Operadores de Membresía
 
 - **En (`in`):** Verifica si un valor está presente en una secuencia.
 
@@ -260,15 +280,68 @@ print(not "hello")  # Devuelve False
   x = (4 not in [1, 2, 3])  # x = True
   ```
 
-### Jerarquía de Operadores
+## Jerarquía de Operadores
 
 La jerarquía (o precedencia) de operadores determina el orden en que las operaciones se realizan. Aquí está una tabla que muestra la jerarquía de operadores en Python, de mayor a menor precedencia:
 
-| Operador                                        | Descripción                              |
-|-------------------------------------------------|------------------------------------------|
-| `()`                                            | Paréntesis                               |
-| `**`                                            | Exponenciación                           |
-| `+x`, `-x`, `~x`                                | Signo positivo, signo negativo, bitwise NOT |
-| `*`, `/`, `//`, `%`                             | Multiplicación, división, división entera, módulo |
-| `+`, `-`                                        | Suma, resta                              |
-| `in`, `not in`, `is`, `is not`, `<`, `<=`, `>`, `>=`, `!=`, `==` | Operadores de comparación, identidad, y
+| Precedencia | Operador(es)                                        | Descripción                                 |
+|-------------|-----------------------------------------------------|---------------------------------------------|
+| 1           | `()`                                                | Paréntesis                                  |
+| 2           | `**`                                                | Exponenciación                              |
+| 3           | `*`, `/`, `//`, `%`                                  | Multiplicación, división, división entera, módulo |
+| 4           | `+`, `-`                                            | Suma, resta
+| 5          | `in`, `not in`, `is`, `is not`, `<`, `<=`, `>`, `>=`, `!=`, `==` | Operadores de comparación, identidad, y membresía |
+| 6          | `not`                                               | NOT lógico                                  |
+| 7          | `and`                                               | AND lógico                                  |
+| 8          | `or`                                                | OR lógico                                   |
+| 10          | `:=`                                                | Operador de asignación por expresión "walrus"|
+
+Si ya eres un conocedor a lujo de detalle, veras que omití algunos operadores como los bit a bit, debido a que no tocare dichos operadores en todo el curso.
+
+### Operador walrus
+
+Si vez a detalle, al final coloque el operador "walrus" (morza en español), que fue añadido en la 3.8. Este es en realidad un operador algo infravalorado dentro de python, ya que no se utiliza con frecuencia. Dicho operador permite asignar el valor de una variable y luego usarlo en una sola expresión en la misma linea de código.
+Aca un ejemplo:
+
+```python
+# Sin el operador "walrus"
+x = 5
+print(x * 2)
+```
+
+Como vez, primero creo una variable y después en la impresión tomo el valor de la variable y la multiplico por 2.
+Con el operador *morza* podríamos acortar esta misma lógica en una sola linea.
+
+```python
+# Con el operador "morza"
+print((x:= 5) * 2)
+
+```
+
+Como veras, no es muy util en este tipo de casos. En donde considero que dicho operador puede ser mas utilizado es en condicionales y ciclos.
+Ejemplo: Crea un ciclo donde le pidas con antelación palabras a un usuario y que cuando coloque la palabra "stop", salga de dicho ciclo.
+
+```python
+# Sin :=
+line = input()
+while line != "stop":
+  print(f"Has ingresado {line}")
+  line = input()
+```
+
+```python
+#con :=
+while (line := input()) != "stop":
+  print(f"Has ingresado {line}")
+```
+
+Veras que si ejecutas ambos scripts, te darán el mismo resultado.
+Ten en cuenta que:
+
+- El operador := no reemplaza al operador de asignación =. La asignación con = sigue siendo la forma estándar de asignar valores a variables en declaraciones independientes.
+- El operador := es útil principalmente en expresiones dentro de estructuras de control como if, while, listas por comprensión, etc.
+- No se debe abusar del operador := para mantener la legibilidad del código. Su uso debe ser justificado y claro.
+
+## Amplia tus conocimientos
+
+Visita: [Aprendepython.es](https://aprendepython.es) para conocer más.

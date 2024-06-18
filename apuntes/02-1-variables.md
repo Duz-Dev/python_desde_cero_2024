@@ -5,6 +5,7 @@
 > *Repositorio*: [python_desde_cero_2024](https://github.com/Duz-Dev/python_desde_cero_2024) - fecha: 3/06/2024
 ---
 <!-- TOC -->
+
 - [Variables](#variables)
   - [¿Qué es un variable?](#qué-es-un-variable)
   - [Definición](#definición)
@@ -14,6 +15,8 @@
     - [Identificadores, Valores y Tipos de Datos](#identificadores-valores-y-tipos-de-datos)
     - [Reglas para Nombres de Variables](#reglas-para-nombres-de-variables)
   - [Amplia tus conocimientos](#amplia-tus-conocimientos)
+
+<!-- /TOC -->
 <!-- /TOC -->
 ---
 
@@ -37,7 +40,7 @@ Cada «trozo» de memoria contiene realmente un objeto, de ahí que se diga que 
 
 - Un **valor** consistente con su tipo.
 
-<center><img src="./img/object.jpg" alt="alt" width="500"/></center>
+<center><img src="./img/object.jpg" alt="imagen referencial de aprende python Español" width="500"/></center>
 
 
 ### Declaración y Asignación
@@ -74,6 +77,8 @@ Python no solo tiene una forma de asignar los valores, también soporta otras fo
   x, y, z = [4,5,6] 
   # x = 4; y = 5; z = 6
   ```
+
+Recuerda que los [PEP](01_introduccion.md/#9-declaraciones) nos mencionan, que es una mejor practica el declarar estas variables
 
 Las variables en Python son flexibles y pueden cambiar de tipo a lo largo del programa. Aquí hay un ejemplo de reasignación de variables:
 
@@ -138,7 +143,8 @@ MY_NAME = "Juan"
   2. ``num_elements``
   3. ``number_of_elements``
   4. ``number_of_elements_to_be_handled``
-  - En este caso, la mejor a utilizar sera la 2da o en su defecto la 3era opción.
+  
+  En este caso, la mejor a utilizar sera la 2da o en su defecto la 3era opción.
 
 - Usar nombres para variables (ejemplo ``article``).
 

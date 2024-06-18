@@ -15,8 +15,8 @@
   - [Instalación de Python](#instalación-de-python)
   - [Hola mundo en python](#hola-mundo-en-python)
   - [Primeros pasos en python](#primeros-pasos-en-python)
+    - [Documentación](#documentación)
     - [El Zen de python](#el-zen-de-python)
-      - [Definición](#definición)
     - [Comentarios en python](#comentarios-en-python)
       - [Comentarios de una linea](#comentarios-de-una-linea)
       - [comentarios de comillas triples (docstrings)](#comentarios-de-comillas-triples-docstrings)
@@ -34,6 +34,19 @@
         - [9. Declaraciones](#9-declaraciones)
         - [10. Espacios de nombres](#10-espacios-de-nombres)
   - [Amplia tus conocimientos](#amplia-tus-conocimientos)
+
+<!-- /TOC -->
+        - [2. Longitud de la Línea](#2-longitud-de-la-línea)
+        - [3. Saltos de Línea](#3-saltos-de-línea)
+        - [4. Importaciones](#4-importaciones)
+        - [5. Espacios en Blanco](#5-espacios-en-blanco)
+        - [6. Nomenclatura](#6-nomenclatura)
+        - [7. Comentarios](#7-comentarios)
+        - [8. Docstrings](#8-docstrings)
+        - [9. Declaraciones](#9-declaraciones)
+        - [10. Espacios de nombres](#10-espacios-de-nombres)
+
+- [Amplia tus conocimientos](#amplia-tus-conocimientos)
 
 <!-- /TOC -->
 <!-- /TOC -->
@@ -190,11 +203,25 @@ En la terminal, solo bastaría con escribir el nombre del archivo, sin necesidad
 
 Ahora que sabemos crear un archivo de python y utilizar el interprete, es momento de ponernos a trabajar y empezar a conocer algunas cosas de este lenguaje.
 
+Ahora te daré un tour sobre algunos temas que en realidad dependiendo tus bases, pueden ser algo mas complicados o sin un background en donde aplicar hasta que conozcas mas de python.
+
+### Documentación
+
+*Debes saber que toda pieza de software o elemento creado por los programadores, debe pasar por la practica de crear un manuscrito (documento) ancestral que trascenderá y sera leído por miles o millones de programadores, los cuales intentaran descifrar tus encantamientos (codigo), que les sera guía en este basto mundo.*
+
+Fuera de metáforas, la documentación, es la colección de datos e información que muestra a lujo de detalle (no siempre) el uso y explicación de los elementos de un software.
+
+Cuando hablamos de un lenguaje de programación como lo es Python, también existe dicha documentación la cual fue creada y esta disponible para todo mundo.
+
+Uno de los objetivos de la documentación es darle una introducción y explicación de lo que puede hacer con tal tecnología, asi como explicación de detalles técnicos.
+
+Si eres nuevo en algo, la mejor decisión para aprender sobre esto es buscando si existe documentación oficial sobre dicha cosa, ya que es la fuente confiable de información mas veras que podrás encontrar para tal tema.
+
+El enlace de la documentación de python esta [aqui](https://docs.python.org/3/). Si quieres aprender algo sobre python, este sera el mejor recurso que encontraras y lo mejor es que esta traducido a el español.
+
 ### El Zen de python
 
 El Zen de Python es una colección de 19 principios que guían el diseño del lenguaje Python y su filosofía de desarrollo. Fue escrito por Tim Peters y está incluido como un "huevo de pascua" en el lenguaje Python. Estos principios reflejan las mejores prácticas y la mentalidad que los desarrolladores de Python deben adoptar para escribir código limpio, legible y eficiente.
-
-#### Definición
 
 El Zen de Python se puede visualizar ejecutando `import this` en un intérprete de Python.
 
@@ -224,7 +251,7 @@ A continuación, se muestran los principios del Zen de Python (traducido al espa
 
 Estos principios promueven la escritura de código que sea fácil de entender y mantener.
 
-Notaras con el tiempo que mucha de estos puntos están presentes en cada concepto que dentro de python.
+Notaras con el tiempo que mucha de estos puntos están presentes en cada concepto que aprendas dentro de python.
 
 ### Comentarios en python
 
