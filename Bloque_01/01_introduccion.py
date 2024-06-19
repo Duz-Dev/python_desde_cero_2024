@@ -35,4 +35,4 @@ None # ---> nada
 }
 
 # Set | conjunto
-{"manzana", "pera", "chettos"}
+{}
