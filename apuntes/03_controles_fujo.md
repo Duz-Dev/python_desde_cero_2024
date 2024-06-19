@@ -5,6 +5,7 @@
 > *Repositorio*: [python_desde_cero_2024](https://github.com/Duz-Dev/python_desde_cero_2024) - fecha de edición: 14/06/2024
 ---
 <!-- TOC -->
+
 - [Controles de flujo](#controles-de-flujo)
   - [Estructuras Condicionales](#estructuras-condicionales)
     - [Reglas y Consideraciones](#reglas-y-consideraciones)
@@ -127,6 +128,14 @@ else:
     print("x es un número negativo")
 ```
 
+En las condiciones podemos hacer uso de todos los operadores que conocemos, por ejemplo esta el operador de membresía, que si recuerdas, se utiliza para verifica si un valor está presente en una secuencia.
+
+```python
+fruta = "manzana"
+if "n" in fruta:
+    print("La letra 'n' está en 'manzana'")
+```
+
 ## Match
 
 La estructura condicional `match` es una característica introducida en Python 3.10 que proporciona una forma poderosa y flexible de hacer coincidencias (matching) con patrones en lugar de solo valores simples. Esta estructura es similar a las expresiones de coincidencia de patrones (pattern matching) que se encuentran en otros lenguajes de programación como Swift y Rust.
@@ -161,41 +170,39 @@ match valor:
 Coincidencia con valores literales (string)
 
 ```python
-def identificar_color(color):
-    match color:
-        case 'rojo':
-            return "Es el color rojo"
-        case 'verde':
-            return "Es el color verde"
-        case 'azul':
-            return "Es el color azul"
-        case _:
-            return "Color desconocido"
+color = 'verde'
+mgs = "" #mensaje
+match color:
+    case 'rojo':
+        msg = "Es el color rojo"
+    case 'verde':
+        msg = "Es el color verde"
+    case 'azul':
+        msg = "Es el color azul"
+    case _:
+        msg = "Color desconocido"
 
-print(identificar_color('rojo'))  # Salida: Es el color rojo
-print(identificar_color('amarillo'))  # Salida: Color desconocido
+print(print(msg))  # Salida: Es el color verde
 ```
 
 Coincidencia con tuplas
 
 ```python
-def manejar_punto(punto):
-    match punto:
-        case (0, 0):
-            return "Es el origen"
-        case (x, 0):
-            return f"En el eje X en {x}"
-        case (0, y):
-            return f"En el eje Y en {y}"
-        case (x, y):
-            return f"En el punto ({x}, {y})"
-        case _:
-            return "Punto desconocido"
+# Definir el punto constante
+punto = (3, 4)
 
-print(manejar_punto((0, 0)))  # Salida: Es el origen
-print(manejar_punto((3, 0)))  # Salida: En el eje X en 3
-print(manejar_punto((0, 4)))  # Salida: En el eje Y en 4
-print(manejar_punto((3, 4)))  # Salida: En el punto (3, 4)
+# Usar la estructura match para evaluar el punto
+match punto:
+    case (0, 0):
+        print("Es el origen")
+    case (x, 0):
+        print(f"En el eje X en {x}")
+    case (0, y):
+        print(f"En el eje Y en {y}")
+    case (x, y):
+        print(f"En el punto ({x}, {y})")
+    case _:
+        print("Punto desconocido")
 ```
 
 Coincidencia con listas
@@ -217,6 +224,7 @@ print(procesar_lista([42]))  # Salida: Lista con un solo elemento: 42
 print(procesar_lista([1, 2]))  # Salida: Lista con dos elementos: 1 y 2
 print(procesar_lista([1, 2, 3]))  # Salida: Lista con más de dos elementos
 ```
+
 Existen otras estructuras que como vez pueden elevar la complejidad del código, ya es a criterio de cada persona explorar las utilidades de match.
 
 ### Guards (protecciones)
