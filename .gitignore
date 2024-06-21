@@ -2,4 +2,5 @@
 apuntes/*.pdf
 pdf
 #Ignora carpetas
-EXTRAS
+ACTIVIDADES_RESUELTAS
+__pycache__
