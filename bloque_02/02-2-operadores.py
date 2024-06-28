@@ -97,6 +97,7 @@ print(3.5 < 7)  # Salida: True
 ? or. Retorna el primer operando si es True, de lo contrario, retorna el segundo operando.
 ?not. Retorna el valor booleano opuesto del operando.
 """
+
 #*Recuerda que valores como: 0, "", None, [], {}, etc. Son tomados como valores falsos
 #Ejemplos
 False and True #salida: false
