@@ -2,7 +2,7 @@
 
 ![img: Tipos de datos](https://i.postimg.cc/xd3ZLrLM/image.png)
 
-> *Repositorio*: [python_desde_cero_2024](https://github.com/Duz-Dev/python_desde_cero_2024) - fecha de edición: 14/06/2024
+> *Repositorio*: [python_desde_cero_2024](https://github.com/Duz-Dev/python_desde_cero_2024) - fecha de edición: 9/07/2024
 ---
 <!-- TOC -->
 
@@ -10,6 +10,9 @@
   - [Estructuras Condicionales](#estructuras-condicionales)
     - [Reglas y Consideraciones](#reglas-y-consideraciones)
     - [Ejemplos condicionales](#ejemplos-condicionales)
+  - [Operador Ternario](#operador-ternario)
+    - [Ejemplo](#ejemplo)
+    - [Ventajas y Usos](#ventajas-y-usos)
   - [Match](#match)
     - [Definición](#definición)
     - [Sintaxis](#sintaxis)
@@ -19,6 +22,9 @@
       - [Funcionamiento de los Guards](#funcionamiento-de-los-guards)
       - [Ejemplos de Guard](#ejemplos-de-guard)
 
+<!-- /TOC -->plos de Guard](#ejemplos-de-guard)
+
+<!-- /TOC -->
 <!-- /TOC -->
 
 ## Estructuras Condicionales
@@ -135,6 +141,52 @@ fruta = "manzana"
 if "n" in fruta:
     print("La letra 'n' está en 'manzana'")
 ```
+
+## Operador Ternario
+
+El operador ternario en Python es una manera concisa de escribir una expresión condicional. Su sintaxis es la siguiente:
+
+```python
+<valor_si_verdadero> if <condición> else <valor_si_falso>
+```
+
+### Ejemplo
+
+Supongamos que quieres asignar un valor a una variable dependiendo de una condición. Con el operador ternario, puedes hacerlo de la siguiente manera:
+
+```python
+x = 10
+y = 20
+resultado = "x es mayor" if x > y else "y es mayor"
+print(resultado)  # Salida: "y es mayor"
+```
+
+En este ejemplo, `resultado` será `"x es mayor"` si `x` es mayor que `y`, de lo contrario, será `"y es mayor"`.
+
+**Aqui algunos casos de uso**:
+
+1. **Asignación basada en paridad:**
+
+```python
+numero = 5
+tipo = "par" if numero % 2 == 0 else "impar"
+print(tipo)  # Salida: "impar"
+```
+
+2. **Asignación basada en una comparación:**
+
+```python
+a = 5
+b = 10
+mayor = a if a > b else b
+print(mayor)  # Salida: 10
+```
+
+### Ventajas y Usos
+
+El operador ternario es útil para simplificar el código cuando tienes una condición simple que determinará el valor de una variable. Es más compacto y puede hacer el código más legible en casos donde una declaración `if-else` completa sería excesiva.
+
+Recuerda que el operador ternario está pensado para ser usado en situaciones simples. Si la lógica es más compleja, puede ser mejor utilizar una estructura `if-else` tradicional para mantener la claridad del código.
 
 ## Match
 

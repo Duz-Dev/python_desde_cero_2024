@@ -5,3 +5,4 @@
 ? pago por horas trabajadas
 >>>Imprimir el nombre del operador y su sueldo.
 """
+
