@@ -2,7 +2,7 @@
 ---
 *Ejercicio: Calculadora Básica en Python*
 
-!Desarrolla una calculadora sencilla en Python que permita realizar operaciones básicas como suma, resta, multiplicación y división. La calculadora debe solicitar al usuario dos números y la operación que desea realizar. Luego, debe mostrar el resultado de la operación.
+!Desarrolla una calculadora sencilla en Python que permita realizar operaciones básicas como suma, resta, multiplicación y división, exponenciación y división entera. La calculadora debe solicitar al usuario dos números y la operación que desea realizar. Luego, debe mostrar el resultado de la operación.
 
 ?Requisitos:
 1. La calculadora debe ofrecer las siguientes operaciones:
