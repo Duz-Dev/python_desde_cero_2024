@@ -2,7 +2,7 @@
 
 ![img: Tipos de datos](https://i.postimg.cc/xd3ZLrLM/image.png)
 
-> *Repositorio*: [python_desde_cero_2024](https://github.com/Duz-Dev/python_desde_cero_2024) - fecha de edición: 9/07/2024
+> *Repositorio*: [python_desde_cero_2024](https://github.com/Duz-Dev/python_desde_cero_2024) - fecha de edición: 24/07/2024
 ---
 <!-- TOC -->
 
@@ -14,15 +14,35 @@
     - [Ejemplo](#ejemplo)
     - [Ventajas y Usos](#ventajas-y-usos)
   - [Match](#match)
-    - [Definición](#definición)
+    - [Definición](#definici%C3%B3n)
     - [Sintaxis](#sintaxis)
-    - [Reglas y Consideraciones](#reglas-y-consideraciones-1)
+    - [Reglas y Consideraciones](#reglas-y-consideraciones)
     - [Ejemplos match](#ejemplos-match)
-    - [Guards (protecciones)](#guards-protecciones)
+    - [Guards protecciones](#guards-protecciones)
       - [Funcionamiento de los Guards](#funcionamiento-de-los-guards)
       - [Ejemplos de Guard](#ejemplos-de-guard)
+  - [Estructuras cíclicas](#estructuras-c%C3%ADclicas)
+    - [Conceptos previos](#conceptos-previos)
+    - [Ciclo While](#ciclo-while)
+      - [Sintaxis](#sintaxis)
+      - [Break y continue](#break-y-continue)
+      - [Ejemplos](#ejemplos)
+        - [Bucle infinito](#bucle-infinito)
+      - [Implementación de do-while en Python](#implementaci%C3%B3n-de-do-while-en-python)
+    - [Ciclo For](#ciclo-for)
+      - [Ejemplos](#ejemplos)
 
-<!-- /TOC -->plos de Guard](#ejemplos-de-guard)
+<!-- /TOC -->
+<!-- /TOC -->
+<!-- /TOC -->
+      - [Ejemplos](#ejemplos)
+    - [Ciclo For](#ciclo-for)
+      - [Definición](#definición-2)
+      - [Ejemplos](#ejemplos-1)
+    - [Consideraciones Finales](#consideraciones-finales)
+
+<!-- /TOC -->
+<!-- /TOC -->
 
 <!-- /TOC -->
 <!-- /TOC -->
@@ -474,3 +494,258 @@ En este ejemplo:
 - `case t if len(t) >= 5:`:
   - `t` captura el valor de `texto`.
   - Si la longitud de `t` es 5 o mayor, se devuelve "Texto largo".
+
+## Estructuras cíclicas
+
+Imagina que tienes que repartir invitaciones para una fiesta a 100 personas. Si decides hacerlo manualmente, te tomaría mucho tiempo y sería propenso a errores, como olvidar a alguien o enviar la invitación dos veces a la misma persona. Una solución más eficiente sería utilizar un programa de computadora para enviar automáticamente las invitaciones.
+
+Un ciclo en Python puede automatizar esta tarea, asegurando que cada persona reciba una invitación y que el proceso sea rápido y sin errores.
+
+```python
+# Lista de invitados
+invitados = ["Juan", "Ana", "Luis", "María", "Pedro", "Lucía"]
+
+# Enviar invitación a cada invitado
+for invitado in invitados:
+    print(f"Enviando invitación a {invitado}")
+```
+
+En este ejemplo, el ciclo for recorre cada nombre en la lista de invitados y envía una invitación. Esto simplifica enormemente la tarea de enviar invitaciones y elimina el riesgo de errores humanos.
+
+Las estructuras cíclicas en programación son constructos que permiten repetir una o más instrucciones múltiples veces. Estas repeticiones se controlan mediante condiciones específicas, lo que hace posible ejecutar bloques de código de manera continua mientras se cumplan ciertas condiciones. En Python, las estructuras cíclicas más comunes son el ciclo `while` y el ciclo `for`. A continuación, exploraremos cada una de estas estructuras en detalle.
+
+### Conceptos previos
+
+Para comprender mejor los ciclos en Python, es útil tener una comprensión clara de varios conceptos previos. Aquí están algunos términos y conceptos importantes que te ayudarán a entender mejor cómo funcionan los ciclos:
+
+**Iteración.**  
+La iteración es el proceso de **repetir** un conjunto de instrucciones un número determinado de veces o hasta que se cumpla una condición específica. En programación, iterar sobre una secuencia significa ejecutar un bloque de código para cada elemento en esa secuencia.
+
+**Contador.**  
+Un contador es una variable que se utiliza para llevar la cuenta de cuántas veces se ha ejecutado un bloque de código en un ciclo. Se suele inicializar a un valor y se incrementa o decrementa en cada iteración del ciclo.
+
+**Condición.**  
+Una condición es una expresión que se evalúa como verdadera o falsa. En los ciclos, las condiciones determinan si el ciclo debe continuar o detenerse.
+
+**Secuencia.**  
+Una secuencia es una colección ordenada de elementos, como una lista, una tupla, un conjunto o una cadena de caracteres. Los ciclos `for` se utilizan para iterar sobre secuencias.
+
+**Acumulador**  
+Un acumulador es una variable que se utiliza para acumular o agregar valores a lo largo de las iteraciones de un ciclo. Se inicializa a un valor y se actualiza en cada iteración.
+
+### Ciclo While
+
+El ciclo `while` es una estructura de control que permite ejecutar un bloque de código repetidamente mientras una condición dada sea verdadera. Este ciclo es útil cuando no se sabe de antemano cuántas veces se necesita repetir el bloque de código, sino que depende de una condición dinámica que puede cambiar durante la ejecución del ciclo.
+
+#### Sintaxis
+
+```python
+while condición:
+    # Bloque de código a ejecutar mientras la condición sea verdadera
+```
+
+Un ejemplo seria, que tal si queremos que un usuario ingrese números enteros positivos, y en caso de ingresar un dato numérico diferente, lo obligue a ingresa uno si valido.
+
+```python
+num = int(input("ingresa un numero: "))
+
+while num <= 0:
+    print(f"El numero {num} NO es positivo. Ingrese nuevamente el dato.\n")
+
+    num = int(input("ingresa un numero: "))
+```
+
+Como vemos aqui, pido dicho dato y lo guardo, despues evaluamos en un ciclo while que dicho numero si es menor e igual que cero, ejecute lo que esta en este mismo ciclo.
+
+>Observacion. La palabra while se traduce como 'mientras' en español, por ende posiblemente te sea mas facil leer el script ``while num <= 0` de la siguiente manera: Mientras la condicion, num sea menor o igual que cero sea verdadera, el ciclo se va a ejecutar.
+
+#### Break y continue
+
+Existiran casos en donde queramos ejecutar un ciclo hasta que una condicion se cumpla, o queramos omitir algunas iteraciones. Esto es posible con la palabras reservadas break y continue.
+
+- **break**: Se utiliza para salir de un ciclo antes de que se complete todas las iteraciones, útil cuando se encuentra una condición específica que hace innecesario continuar.
+
+- **continue**: Se utiliza para omitir el resto del bloque de código actual en un ciclo y pasar a la siguiente iteración, útil para saltar ciertas iteraciones basadas en una condición específica.
+
+#### Ejemplos
+
+**Ejemplo 1**. Usando la palabra break
+
+Imagina un escenario donde pides al usuario que ingrese una contraseña. Quieres permitir al usuario tres intentos para ingresar la contraseña correcta y salir del ciclo si la contraseña es correcta.
+
+```python
+password_correcta = "python123"
+intentos = 0
+
+while intentos < 3:
+    password = input("Introduce tu contraseña: ")
+    if password == password_correcta:
+        print("Contraseña correcta, acceso concedido.")
+        break
+    else:
+        print("Contraseña incorrecta, intenta de nuevo.")
+    intentos += 1
+
+```
+
+**Ejemplo 2**. Usando la palabra continue
+
+Imagina que tienes una lista de números y quieres imprimir solo los números impares.
+
+```python
+numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+indice = 0
+
+while indice < len(numeros):
+    if numeros[indice] % 2 == 0:
+        indice += 1
+        continue
+    print(f"Número impar: {numeros[indice]}")
+    indice += 1
+```
+
+##### Bucle infinito
+
+Un bucle infinito ocurre cuando la condición del ciclo `while` siempre se evalúa como verdadera. Es importante evitar estos bucles, ya que pueden hacer que un programa se bloquee o consuma recursos indefinidamente.
+
+```python
+while True:
+    print("Este es un bucle infinito")
+```
+
+Este ejemplo continuará imprimiendo "Este es un bucle infinito" hasta que se interrumpa manualmente el programa. Como curiosidad, es posible cancelar este bucle en la terminal si oprimes la combinación de teclas `ctrl + c`.
+
+Para evitar esto mismo, es necesario incluir una regla que cambie la condición del ciclo, en este caso podría ser que le pregunte al usuario si quiere detener el ciclo, si dice que si, salga del mismo.
+
+```python
+while True:
+    print("Este es un bucle infinito")
+    print("¿Desea salir del bucle? [Y/N]")
+    if (input(">>> ") == "Y"):
+        break
+```
+
+#### Implementación de do-while en Python
+
+Python no tiene una estructura `do-while` como en otros lenguajes de programación. Sin embargo, se puede emular utilizando un ciclo `while` con una condición que se verifique al final del bloque de código.
+
+**Sintaxis y ejemplo:**
+
+```python
+while True:
+    # Bloque de código a ejecutar al menos una vez
+    print("Esto se ejecuta al menos una vez")
+    
+    # Verificar la condición para continuar
+    if not condicion:
+        break
+```
+
+```python
+contador = 0
+while True:
+    print("Contador:", contador)
+    contador += 1
+    if contador >= 5:
+        break
+```
+
+En este ejemplo, el bloque de código dentro del ciclo `while` se ejecuta al menos una vez, y luego se verifica la condición `contador >= 5`. Si la condición es verdadera, se utiliza `break` para salir del ciclo.
+
+### Ciclo For
+
+El ciclo `for` en Python se utiliza para iterar sobre una secuencia (como una lista, una tupla, un diccionario, un conjunto o una cadena). A diferencia del ciclo `while`, el ciclo `for` se utiliza cuando se sabe de antemano cuántas veces se necesita repetir el bloque de código, ya que se basa en la iteración sobre elementos de una secuencia.
+
+**Sintaxis:**
+
+```python
+for elemento in secuencia:
+    # Bloque de código a ejecutar para cada elemento en la secuencia
+```
+
+**Ejemplo básico:**
+
+```python
+numeros = [1, 2, 3, 4, 5]
+for numero in numeros:
+    print("Número:", numero)
+```
+
+En este ejemplo, el ciclo `for` itera sobre la lista `numeros`, imprimiendo cada elemento de la lista.
+
+Como vemos, el elemento es una variable auxiliar que nos ayuda a iterar el elemento de secuencia. Podemos iterar cualquier cosa que cumpla esta característica como un str, lista, tupla, etc.
+
+```python
+comida = "cereal"
+for letra in comida:
+    print("letra:", letra)
+```
+
+Como dato adicional, es posible que aveces no queramos crear y utilizar un elemento en nuestro ciclo for, para ello es valido utilzar el comodin `_` para iterar una secuencia.
+
+```python
+frutas = ["aguacate", "papa", "sandia", "huevo"]
+for _ in frutas:
+    print(comida)
+```
+
+Esto anterior, imprimira la lista de frutas, n-cantidad de elementos que tenga la lista frutas
+
+Tecnicamente si podemos utilizar el comodin e imprimirlo, pero no es una practica recomendable.
+
+```python
+comida = "cereal"
+for _ in comida:
+    print("letra:", _)
+```
+
+#### Ejemplos
+
+**Ejemplo 1: Uso del ciclo `for` con una lista**
+
+```python
+frutas = ["manzana", "banana", "cereza"]
+for fruta in frutas:
+    print("Fruta:", fruta)
+```
+
+Este ciclo `for` itera a través de la lista `frutas`, imprimiendo cada elemento de la lista.
+
+**Ejemplo 2: Uso del ciclo `for` con `range`**
+
+El `range` es una función que genera una secuencia de números, lo que resulta útil para iterar un número específico de veces. Este puede definir el rango empezando desde 0, y terminando hasta n-1. Ejemplo si decimos range(10), seria equivalente a un rango de numeros 0-9. Tambien podemos cambiar el primer dato ejemplo range(1,10), que seria igual a 1-9.
+
+```python
+for i in range(5):
+    print("Iteración:", i)
+```
+
+Este ejemplo imprime los números del 0 al 4, ya que `range(5)` genera una secuencia de números desde 0 hasta 4.
+
+Otro ejemplo es que podemos modificar el salto entre las distancias entre el primer numero y el que le sigue, es decir, el incremento. En la funcion range, seria el tercer valor que le paraciamos y seria llamado step. ejemplo `range(num-inicial,num-final,incremento)`
+
+Si quisiéramos imprimir los numeros pares del 2 al 10, podríamos modificar el range, para que a partir del numero inicial, en este caso el 2, le sume dos, y ya esto lo itera y lo imprime.
+
+```python
+for i in range(2,10+1,2):
+    print(i)
+```
+
+Para crear un range que genere una secuencia de números en decremento y los imprima, puedes utilizar un valor negativo para el paso (step) en el range. Aquí te muestro cómo hacerlo:
+
+```python
+for i in range(10, 0, -1):
+    print(i)
+```
+
+El rango se detiene antes de llegar a 0. Por lo tanto, los números generados serán: 10, 9, 8, 7, 6, 5, 4, 3, 2, 1.
+
+**Ejemplo 3: Iterar sobre un diccionario**
+
+```python
+edades = {"Juan": 25, "Ana": 30, "Luis": 28}
+for nombre, edad in edades.items():
+    print(f"{nombre} tiene {edad} años")
+```
+
+En este caso, el ciclo `for` itera sobre un diccionario, imprimiendo las claves y valores correspondientes.
