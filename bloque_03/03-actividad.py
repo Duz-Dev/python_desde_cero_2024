@@ -70,10 +70,13 @@
 
 # NOMBRE = "joel" # 
 
-import calendar
+# import calendar
 
-yy = 2024
-mm = 7
+# yy = 2024
+# mm = 7
 
-print(calendar.month(yy,mm))
+# print(calendar.month(yy,mm))
+
+# Obtener todos los métodos de las cadenas (str)
+# Obtener una lista de métodos y atributos de un tipo de dato
 

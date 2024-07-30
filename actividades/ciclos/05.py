@@ -4,3 +4,40 @@
 #? Requisitos: 
 #* -Usa el ciclo for
 #* -Nada de funciones nativas, módulos, funciones.
+
+
+#*variables
+dato = 0
+i = 0
+patron = 'aeiouAEIOU123'
+dato2 = ""
+
+
+#*input
+print(">>>Datos de entrada<<<")
+dato = input("ingresa un texto: ")
+
+#*process
+
+
+while True:
+    for _ in dato:
+        i += 1
+
+    if not(8 <= i <= 14):
+        print("Dato no valido, vuelvelo a ingresar.")
+        dato = dato = input("ingresa un texto: ")
+    else:
+        break
+
+
+for char in dato:
+    if not(char in patron):
+        dato2 += char
+
+dato = dato2
+
+#*output
+print("\n-----Datos de salida--------")
+print(f">>>{datoñ}")
+print("----------------------------")

@@ -21,7 +21,7 @@ Los temas también están en formato pdf en [Google drive](https://drive.google.
 | 1   | [Introducción a Python](./apuntes/01_introduccion.md)   |
 | 2   |  [Tipos de datos I](./apuntes/02_tipos_datos.md)   |
 | 3   |  [Control de flujo](./apuntes/03_controles_fujo.md)   |
-| 4   | Tipos de datos II   |
+| 4   | [Tipos de datos II](./apuntes/04_tipos_datos_ll.md)  |
 | 5   | Funciones    |
 | 6   | Excepciones  |
 | 7   | Módulos  |
