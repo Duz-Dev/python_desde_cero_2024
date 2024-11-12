@@ -2,7 +2,7 @@
 
 ![alt text](./img/lorem.png)
 
-> *Repositorio*: [python_desde_cero_2024](https://github.com/Duz-Dev/python_desde_cero_2024) - fecha de edición: 24/07/2024
+> *Repositorio*: [python_desde_cero_2024](https://github.com/Duz-Dev/python_desde_cero_2024) - fecha de edición: 30/07/2024
 
 <!-- TOC -->
 
@@ -20,7 +20,6 @@
     - [Redondeo de Valores](#redondeo-de-valores)
     - [Modulo decimal](#modulo-decimal)
       - [Redondeo Explícito](#redondeo-explícito)
-      - [Formateo de Salida](#formateo-de-salida)
       - [Ejemplo: Cálculo Financiero](#ejemplo-cálculo-financiero)
   - [Listas en Python](#listas-en-python)
     - [Creación y Acceso](#creación-y-acceso)
@@ -29,7 +28,6 @@
     - [Detalles y usos](#detalles-y-usos-2)
 
 <!-- /TOC -->
-
 > *Repositorio*: [python_desde_cero_2024](https://github.com/Duz-Dev/python_desde_cero_2024) - fecha de edición: 24/07/2024
 
 ## Introducción
@@ -47,6 +45,8 @@ x = 10
 print(type(x))  # <class 'int'>
 ```
 
+Esta devuelve el mensaje "class" y el tipo porque todos los objetos son instancias de alguna clase en python. Esto puede ser muy confuso ya que aun no vemos el tema de clases y objetos, pero de antemano ten en cuenta que todas las clases son una plantilla y los objetos son como elementos que a base de una plantilla (clase) se crearon. Este procedimiento es llamado instancia, por ende, podemos comprobar si un objeto pertenece a una instancia, es decir, si se origino de una clase que pensamos, usando la siguiente función:
+
 La función `isinstance` se utiliza para comprobar si un objeto es una instancia de una clase específica:
 
 ```python
@@ -55,12 +55,17 @@ print(isinstance(x, int))  # True
 print(isinstance(x, float))  # False
 ```
 
+Todo objeto en python tiene métodos. Un método es básicamente una función encapsulada dentro de la clase. Esto es util porque puede ayudarnos a modificar el objeto. Gran parte de este apunte se basa en poder modificar los tipos de datos de python mas usado.
+Si quisiéramos saber cuales métodos tiene alguna clase y por ende un objeto, podemos utilizar la función `dir`
+
 La función `dir` se utiliza para listar todos los atributos y métodos disponibles de un objeto. Esto es útil para explorar qué operaciones se pueden realizar sobre un objeto específico.
 
 ```python
 x = "hello"
 print(dir(x))
 ```
+
+Al ejecutar esto veremos todos los métodos del tipo de dato que le pasamos a la función. En este caso la variable `x` contiene texto y por ende es un string.
 
 ## Strings
 
@@ -150,17 +155,21 @@ print(s.find("mundo"))  # 5
 
 ### Detalles y usos
 
-- Los strings en Python son inmutables. Esto significa que cualquier operación que modifique un string crea una nueva cadena en lugar de modificar la original.
-- Los strings pueden ser iterados carácter por carácter usando un bucle `for`.
-- Se pueden utilizar índices negativos para acceder a los caracteres desde el final del string.
+- **inmutabilidad**: Los strings en Python son inmutables. Esto significa que cualquier operación que modifique un string crea una nueva cadena en lugar de modificar la original.
+  
+- **Iteración**: Los strings pueden ser iterados carácter por carácter usando un bucle `for`.
+
+- **Extracción**: Se trata de sacar fuera de una cadena, una porción de la misma según su posición dentro de ella. Para lo cual es necesario indicar la posición a extraer.
 
 ```python
 s = "Python"
+print(s[0])  # P
+print(s[1])  # y
 print(s[-1])  # n
-print(s[-2])  # o
+print(s[2:4]) #tho
 ```
 
-También es posible aplicar los cambios que vimos sobre los strings a funciones que devuelvan este valor. Un ejemplo claro de este es la función `input`. Este por defecto le pide un dato al usuario y en automatico python lo toma como un str, y por ende podemos manipularlo como uno.
+- **Manipulación de input**: También es posible aplicar los cambios que vimos sobre los strings a funciones que devuelvan este valor. Un ejemplo claro de este es la función `input`. Este por defecto le pide un dato al usuario y en automático python lo toma como un str, y por ende podemos manipularlo como uno.
 
 ```python
 #!Ejemplo 1
@@ -175,7 +184,6 @@ print(text_lower)
 ## Enteros (int) y Flotantes (float)
 
 Un entero es un número sin decimales. Puede ser positivo, negativo o cero. Los enteros en Python tienen una precisión ilimitada, lo que significa que pueden ser tan grandes o pequeños como lo permita la memoria disponible.
-
 Los enteros se utilizan en una amplia variedad de contextos, desde contar elementos en una lista hasta realizar operaciones matemáticas complejas.
 
 ```python
@@ -251,22 +259,22 @@ print(a ** b)  # 8
 
 - **Precisión de `float`**: Los números de punto flotante pueden tener problemas de precisión debido a cómo se representan internamente en el hardware. Esto puede llevar a resultados inesperados en algunos cálculos.
 
-  ```python
-  a = 0.1 + 0.2
-  print(a == 0.3)  # False
-  print(a)  # 0.30000000000000004
-  ```
+```python
+a = 0.1 + 0.2
+print(a == 0.3)  # False
+print(a)  # 0.30000000000000004
+```
 
-  Descuida, este es un problema clásico y que sucede en casi todos los lenguajes de programación, y es inevitable. El tema es aun mas extenso de lo que crees porque involucra mucho el tema de como se gestionan los números en nuestros ordenadores. Te recomiendo visitar el siguiente [enlace](http://puntoflotante.org/).
+Descuida, este es un problema clásico y que sucede en casi todos los lenguajes de programación, y es inevitable. El tema es aun mas extenso de lo que crees porque involucra mucho el tema de como se gestionan los números en nuestros ordenadores. Te recomiendo visitar el siguiente [enlace](http://puntoflotante.org/).
 
-- **Operaciones entre `int` y `float`**: Cuando se realizan operaciones entre `int` y `float`, el resultado será un `float`.
+- **Operaciones entre `int` y `float`**: Cuando se realizan operaciones entre estos dos tipos, el resultado será un `float`.
 
-  ```python
-  a = 5
-  b = 2.0
-  c = a + b
-  print(type(c))  # <class 'float'>
-  ```
+```python
+a = 5
+b = 2.0
+c = a + b
+print(type(c))  # <class 'float'>
+```
 
 ### Funciones Matemáticas del Módulo `math`
 
@@ -398,8 +406,6 @@ number = Decimal('2.34567')
 rounded_number = number.quantize(Decimal('0.01'), rounding=ROUND_HALF_UP)
 print(rounded_number)  # 2.35
 ```
-
-#### Formateo de Salida
 
 Al mostrar números en tu aplicación, utiliza formateo de salida para asegurarte de que los números se muestren con la precisión adecuada.
 

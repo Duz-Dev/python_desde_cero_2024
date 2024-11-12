@@ -14,37 +14,24 @@
     - [Ejemplo](#ejemplo)
     - [Ventajas y Usos](#ventajas-y-usos)
   - [Match](#match)
-    - [Definición](#definici%C3%B3n)
+    - [Definición](#definición)
     - [Sintaxis](#sintaxis)
-    - [Reglas y Consideraciones](#reglas-y-consideraciones)
+    - [Reglas y Consideraciones](#reglas-y-consideraciones-1)
     - [Ejemplos match](#ejemplos-match)
-    - [Guards protecciones](#guards-protecciones)
+    - [Guards (protecciones)](#guards-protecciones)
       - [Funcionamiento de los Guards](#funcionamiento-de-los-guards)
       - [Ejemplos de Guard](#ejemplos-de-guard)
-  - [Estructuras cíclicas](#estructuras-c%C3%ADclicas)
+  - [Estructuras cíclicas](#estructuras-cíclicas)
     - [Conceptos previos](#conceptos-previos)
     - [Ciclo While](#ciclo-while)
-      - [Sintaxis](#sintaxis)
+      - [Sintaxis](#sintaxis-1)
       - [Break y continue](#break-y-continue)
       - [Ejemplos](#ejemplos)
         - [Bucle infinito](#bucle-infinito)
-      - [Implementación de do-while en Python](#implementaci%C3%B3n-de-do-while-en-python)
+      - [Implementación de do-while en Python](#implementación-de-do-while-en-python)
     - [Ciclo For](#ciclo-for)
-      - [Ejemplos](#ejemplos)
-
-<!-- /TOC -->
-<!-- /TOC -->
-<!-- /TOC -->
-      - [Ejemplos](#ejemplos)
-    - [Ciclo For](#ciclo-for)
-      - [Definición](#definición-2)
       - [Ejemplos](#ejemplos-1)
-    - [Consideraciones Finales](#consideraciones-finales)
 
-<!-- /TOC -->
-<!-- /TOC -->
-
-<!-- /TOC -->
 <!-- /TOC -->
 
 ## Estructuras Condicionales
