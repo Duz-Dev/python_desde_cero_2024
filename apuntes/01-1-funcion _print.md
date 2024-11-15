@@ -4,9 +4,21 @@
 
 > *Repositorio*: [python_desde_cero_2024](https://github.com/Duz-Dev/python_desde_cero_2024) - fecha de edición: 3/06/2024
 ---
+
+## Temas adjuntos
+
+1.0 [Introducción a Python](./01_introduccion.md)
+
+1.1 [Función Print](./01-1-funcion%20_print.md) (Estas aquí)
+  
+>Nota. Los temas adjuntos son la continuación del tema principal, ordenados en forma de indice numeral. **RECOMENDADO NO SALTÁRSELOS**
+
+---
+
 <!-- TOC -->
 
 - [Función print()](#función-print)
+  - [Temas adjuntos](#temas-adjuntos)
   - [Definición](#definición)
   - [Argumento `file`](#argumento-file)
     - [Detalles y Uso](#detalles-y-uso)

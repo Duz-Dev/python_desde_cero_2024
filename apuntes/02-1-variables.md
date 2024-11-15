@@ -4,9 +4,21 @@
 
 > *Repositorio*: [python_desde_cero_2024](https://github.com/Duz-Dev/python_desde_cero_2024) - fecha: 3/06/2024
 ---
+
+## Temas adjuntos
+
+2.0 [Tipos de datos](./02_tipos_datos.md)
+
+2.1 [Variables](./02-1-variables.md) (Estas aquí)
+
+2.2 [Operadores](./02-2-operadores.md)
+  
+>Nota. Los temas adjuntos son la continuación del tema principal, ordenados en forma de indice numeral. **RECOMENDADO NO SALTÁRSELOS**
+---
 <!-- TOC -->
 
 - [Variables](#variables)
+  - [Temas adjuntos](#temas-adjuntos)
   - [¿Qué es un variable?](#qué-es-un-variable)
   - [Definición](#definición)
     - [Declaración y Asignación](#declaración-y-asignación)

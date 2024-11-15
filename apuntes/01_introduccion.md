@@ -14,10 +14,21 @@ Antes de comenzar de lleno en este repositorio, es requisito que tengas a la man
 
 También, en caso de que Python sea el primer lenguaje de programación con el cual tengas contacto, seria muy recomendable que primero abordes algunos conceptos y temas de "lógica de programación". Entender lo que son las variables, tipos de dato, condicionales, ciclos, ect. De lo contrario te sera mucho mas difícil comprender lo que empezaremos abordar de aquí en adelante
 
+## Temas adjuntos
+
+1.0 [Introducción a Python](#introducción-a-python) (Estas aquí)
+
+1.1 [Función Print](./01-1-funcion%20_print.md)
+  
+>Nota. Los temas adjuntos son la continuación del tema principal, ordenados en forma de indice numeral. **RECOMENDADO NO SALTÁRSELOS**
+
+---
+
 ## Contenido
 
 <!-- TOC ignore:true -->
 - [Introducción a Python](#introducción-a-python)
+  - [Temas adjuntos](#temas-adjuntos)
   - [Contenido](#contenido)
   - [Origen de Python y su Propuesta](#origen-de-python-y-su-propuesta)
     - [Características Clave de Python](#características-clave-de-python)

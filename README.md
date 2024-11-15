@@ -4,6 +4,9 @@
 
 Como recomendación si es la primera vez que entraras a python, es que aprendas las bases de dicho lenguaje con ayuda de otros recursos como lo es el sitio de [AprendePython.es](https://aprendepython.es/) y sobre todo la [documentación oficial de python](https://docs.python.org/es/3/).
 
+En caso de tener dudas sobre algun tema en especifico, puedes unirte a nuestra [comunidad de Discord![FrontEnd | Sin Fronteras](https://i.postimg.cc/vZx9tjXC/image.png)](https://discord.gg/Rfzr3pMkr2)
+
+
 <!-- TOC -->
 
 - [Aprende Python 2024](#aprende-python-2024)
@@ -11,8 +14,6 @@ Como recomendación si es la primera vez que entraras a python, es que aprendas 
   - [Ejercicios](#ejercicios)
 
 <!-- /TOC -->
-Los temas también están en formato pdf en [Google drive](https://drive.google.com/drive/folders/1YL39fm1QE9alUxwWTp1phJPr2KkqiM-R?usp=sharing).
-
 ## Temario
 
 | N°  | Tema   |
@@ -22,7 +23,7 @@ Los temas también están en formato pdf en [Google drive](https://drive.google.
 | 3   |  [Control de flujo](./apuntes/03_controles_fujo.md)   |
 | 4   | [Tipos de datos II](./apuntes/04_tipos_datos_ll.md)  |
 | 5   | Funciones    |
-| 6   | Excepciones  |
+| 6   | [Excepciones](./apuntes/06_excepciones.md)  |
 | 7   | Módulos  |
 | 8   | Librerías nativas  |
 | 9   | El gestor PIP  |
@@ -36,6 +37,4 @@ Si buscas actividades y retos, este repositorio también es para ti. En la carpe
 
 Eres libre de realizarlos a tu gusto, pero estos están pensados para que hagas uso de tu lógica, matemáticas y pensamiento critico. Si un ejercicio te indica ciertas restricciones, obedecerlas.
 
-Las actividades de 1-20, involucran que utilices las estructuras condicionales solamente.
-
-Con el tiempo añadiere más. Eres libre de recomendar mas ejercicios para la comunidad.
+Estan categorizadas en diferentes apartados para cada tema ya visto. Recomiendo que empieces con los ejercicios de [condicionales](./actividades/condicionales/nota.md)

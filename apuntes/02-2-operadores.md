@@ -3,10 +3,24 @@
 ![img: Tipos de datos](https://i.postimg.cc/pXWwQLbP/imagen.png)
 
 > *Repositorio*: [python_desde_cero_2024](https://github.com/Duz-Dev/python_desde_cero_2024) - fecha de edición: 17/06/2024
+---
 
+## Temas adjuntos
+
+2.0 [Tipos de datos](./02_tipos_datos.md)
+
+2.1 [Variables](./02-1-variables.md)
+
+2.2 [Operadores](./02-2-operadores.md) (Estas aquí)
+  
+>Nota. Los temas adjuntos son la continuación del tema principal, ordenados en forma de indice numeral. **RECOMENDADO NO SALTÁRSELOS**
+
+
+---
 <!-- TOC -->
 
 - [Operadores](#operadores)
+  - [Temas adjuntos](#temas-adjuntos)
   - [Definición](#definición)
   - [Operadores Aritméticos](#operadores-aritméticos)
   - [Operadores de Comparación](#operadores-de-comparación)

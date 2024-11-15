@@ -4,6 +4,7 @@
 
 > *Repositorio*: [python_desde_cero_2024](https://github.com/Duz-Dev/python_desde_cero_2024) - fecha de edición: 24/07/2024
 ---
+
 <!-- TOC -->
 
 - [Controles de flujo](#controles-de-flujo)
