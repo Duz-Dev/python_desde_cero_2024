@@ -6,14 +6,8 @@ Como recomendación si es la primera vez que entraras a python, es que aprendas 
 
 En caso de tener dudas sobre algun tema en especifico, puedes unirte a nuestra [comunidad de Discord![FrontEnd | Sin Fronteras](https://i.postimg.cc/vZx9tjXC/image.png)](https://discord.gg/Rfzr3pMkr2)
 
+---
 
-<!-- TOC -->
-
-- [Aprende Python 2024](#aprende-python-2024)
-  - [Temario](#temario)
-  - [Ejercicios](#ejercicios)
-
-<!-- /TOC -->
 ## Temario
 
 | N°  | Tema   |
@@ -22,14 +16,13 @@ En caso de tener dudas sobre algun tema en especifico, puedes unirte a nuestra [
 | 2   |  [Tipos de datos I](./apuntes/02_tipos_datos.md)   |
 | 3   |  [Control de flujo](./apuntes/03_controles_fujo.md)   |
 | 4   | [Tipos de datos II](./apuntes/04_tipos_datos_ll.md)  |
-| 5   | Funciones    |
+| 5   | [Funciones](./apuntes/05_funciones.md)    |
 | 6   | [Excepciones](./apuntes/06_excepciones.md)  |
 | 7   | Módulos  |
 | 8   | Librerías nativas  |
 | 9   | El gestor PIP  |
 | 10   | Librerías populares  |
 | 11  | Clases y POO   |
-| 12  | Próximamente   |
 
 ## Ejercicios
 

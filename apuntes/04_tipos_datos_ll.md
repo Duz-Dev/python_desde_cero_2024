@@ -542,3 +542,5 @@ print(anidada[1][2])  # Output: 6
 sublista = frutas[1:3]
 print(sublista)  # Output: ['fresa', 'kiwi']
 ```
+
+<!-- TODO: AÑADE MAS INFORMACION -->
