@@ -1,8 +1,9 @@
-#Ejercicio 9
+#Ejercicio 10
 #!Crea un algoritmo para registrar una contraseña segura para ingresar a un menu el cual contendra todos los algoritmos de la carpeta ciclos.
 #* Primeramente muestra al usuario un menu el cual sea, registrarse o ingresar. En el registro, tendra que ingresar un usuario y contraseña. Los requisitos para el usuario son:
 #? - Entre 4 a 12 caracteres
 #? - no puede iniciar con un numero o simbolo
+#? - Tiene que empezar con mayúscula
 
 #* Para la contraseña:
 #? - Entre 5 a 8 caracteres

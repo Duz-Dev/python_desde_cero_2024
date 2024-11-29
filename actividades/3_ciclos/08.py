@@ -18,5 +18,5 @@ poblacion = {
     "Ciudad de México": 9209944,
     "Zacatecas": 1622138
 }
-#!Posteriormente muestra el estado y el numero de habitantes en un formato dividido por centenas, Ejemplo "El estado con mayor poblacion es 'sonora' con 2,423,212 habitantes".
-#!Muestra el estado con menor poblacion e el que tiene un valor mas secano al promedio entre todos los estados.
+#*Con esto, muestra el estado y el numero de habitantes en un formato dividido por centenas, Ejemplo "El estado con mayor poblacion es 'sonora' con 2,423,212 habitantes".
+#*Muestra el estado con menor poblacion y el que tiene un valor mas secano al promedio entre todos los estados.

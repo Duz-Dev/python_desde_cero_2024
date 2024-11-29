@@ -171,24 +171,24 @@ print(resultado)  # Salida: "y es mayor"
 
 En este ejemplo, `resultado` será `"x es mayor"` si `x` es mayor que `y`, de lo contrario, será `"y es mayor"`.
 
-**Aqui algunos casos de uso**:
+**Aquí algunos casos de uso:**
 
 1. **Asignación basada en paridad:**
 
-```python
-numero = 5
-tipo = "par" if numero % 2 == 0 else "impar"
-print(tipo)  # Salida: "impar"
-```
+    ```python
+    numero = 5
+    tipo = "par" if numero % 2 == 0 else "impar"
+    print(tipo)  # Salida: "impar"
+    ```
 
 2. **Asignación basada en una comparación:**
 
-```python
-a = 5
-b = 10
-mayor = a if a > b else b
-print(mayor)  # Salida: 10
-```
+    ```python
+    a = 5
+    b = 10
+    mayor = a if a > b else b
+    print(mayor)  # Salida: 10
+    ```
 
 ### Ventajas y Usos
 

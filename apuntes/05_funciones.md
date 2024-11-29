@@ -390,4 +390,81 @@ El módulo `typing` en Python se introdujo en la versión 3.5 para proporcionar 
 
 Ahora que conocemos estos detalles del lenguaje python, continuemos con la explicación de las funciones.
 
-##
+## devoluciones múltiples
+
+Imagina que estás desarrollando un programa para calcular información estadística básica de un conjunto de números. Necesitas una función que, al proporcionarle una lista, devuelva tres datos: el promedio, el número máximo y el número mínimo. En lugar de crear varias funciones para cada cálculo, puedes usar una sola función en Python que devuelva todos estos valores.
+
+En Python, una función puede devolver múltiples valores empaquetándose en una tupla. Esto es muy útil cuando necesitas resultados relacionados entre sí. Los valores devueltos se pueden desempaquetar en variables individuales al momento de llamar la función. A continuación planteare 2 escenarios donde esto puede ser util.
+
+### Ejemplo Practico 1. Calcular area y perimetro de un triangulo
+
+Supongamos que queremos calcular el área y el perímetro de un rectángulo dadas su base y altura. Esto lo hacemos dentro de una función que devuelve ambos valores.
+
+```python
+def calcular_area_y_perimetro(base, altura):
+    # Cálculos
+    area = base * altura
+    perimetro = 2 * (base + altura)
+    # Aquí ocurre el empaquetamiento en una tupla
+    return area, perimetro
+
+# Llamada a la función
+resultado = calcular_area_y_perimetro(5, 3)
+print(resultado)  # Salida: (15, 16)
+
+# Desempaquetando la tupla en variables individuales
+area, perimetro = calcular_area_y_perimetro(5, 3)
+print(f"Área: {area}")       # Salida: Área: 15
+print(f"Perímetro: {perimetro}")  # Salida: Perímetro: 16
+```
+
+**Explicación:**
+
+En la línea return area, perimetro, Python crea automáticamente una tupla con los valores area y perimetro. Esto ocurre sin necesidad de escribir explícitamente return (area, perimetro) porque el uso de la coma , ya indica el empaquetamiento.
+
+Cuando llamamos a la función, podemos almacenar el resultado en una variable (en este caso, resultado), que será una tupla que contiene los valores devueltos.
+
+Podemos extraer los valores individuales de la tupla usando el desempaquetamiento, como en la línea area, perimetro = calcular_area_y_perimetro(5, 3). Así asignamos cada valor de la tupla a una variable independiente.
+
+### Ejemplo Practico 2. El anillo rojo de la muerte (Xbox 360)
+
+El problema del "anillo rojo de la muerte" en las Xbox 360 fue causado por sobrecalentamiento y fallos en la placa base. Supongamos que tenemos una función que evalúa el estado de una consola basándose en su temperatura y el estado de su hardware, y devuelve si está en buen estado o no, junto con un mensaje de advertencia si es necesario.
+
+```python
+def diagnosticar_consola(temperatura, hardware_ok):
+    if temperatura > 70:
+        estado = "Defectuosa"
+        mensaje = "Advertencia: Temperatura crítica. RIESGO DE FALLA."
+    elif not hardware_ok:
+        estado = "Defectuosa"
+        mensaje = "Error: Problemas detectados en el hardware."
+    else:
+        estado = "Funcional"
+        mensaje = "Todo está en orden."
+    return estado, mensaje
+
+# Llamada a la función
+estado, mensaje = diagnosticar_consola(75, True)
+print(estado)  # Salida: Defectuosa
+print(mensaje) # Salida: Advertencia: Temperatura crítica. RIESGO DE FALLA.
+```
+
+### Ejemplo Practico 3. La era de los hackeos en PlayStation 2
+
+Imagina que Sony está evaluando la vulnerabilidad de sus consolas frente a ataques de hackers. Crearemos una función que toma el número de intentos de hackeo y los sistemas afectados, y devuelve si la consola es vulnerable y un reporte con detalles.
+
+```python
+def evaluar_seguridad(intentos_hackeo, sistemas_afectados):
+    if intentos_hackeo > 5 or len(sistemas_afectados) > 2:
+        vulnerable = True
+        reporte = f"Vulnerable: {intentos_hackeo} intentos detectados. Sistemas comprometidos: {', '.join(sistemas_afectados)}."
+    else:
+        vulnerable = False
+        reporte = "Sistema seguro. No se detectaron vulnerabilidades críticas."
+    return vulnerable, reporte
+
+# Llamada a la función
+vulnerable, reporte = evaluar_seguridad(6, ["Kernel", "Red"])
+print(vulnerable)  # Salida: True
+print(reporte)     # Salida: Vulnerable: 6 intentos detectados. Sistemas comprometidos: Kernel, Red.
+```

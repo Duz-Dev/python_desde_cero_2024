@@ -36,3 +36,20 @@ print(calcular_precio(100))  # Precio base de 100 con impuesto del 16%, sin desc
 print(calcular_precio(100, descuento=0.10))  # Precio base de 100 con impuesto del 16% y descuento del 10%. Salida: 104.4
 print(calcular_precio(100, 0.08, 0.05))  # Precio base de 100 con impuesto del 8% y descuento del 5%. Salida: 102.6
 
+def diagnosticar_consola(temperatura, hardware_ok):
+    if temperatura > 70:
+        estado = "Defectuosa"
+        mensaje = "Advertencia: Temperatura crítica. RIESGO DE FALLA."
+    elif not hardware_ok:
+        estado = "Defectuosa"
+        mensaje = "Error: Problemas detectados en el hardware."
+    else:
+        estado = "Funcional"
+        mensaje = "Todo está en orden."
+    return estado, mensaje
+
+# Llamada a la función
+estado, mensaje = diagnosticar_consola(75, True)
+print(estado)  # Salida: Defectuosa
+print(mensaje) # Salida: Advertencia: Temperatura crítica. RIESGO DE FALLA.
+
