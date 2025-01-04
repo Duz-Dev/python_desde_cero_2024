@@ -2,7 +2,9 @@
 
 ![alt text](./img/image6.png)
 
-> *Repositorio*: [python_desde_cero_2024](https://github.com/Duz-Dev/python_desde_cero_2024) - fecha de edición: 16/11/2024
+> *Repositorio*: [python_desde_cero_2024](https://github.com/Duz-Dev/python_desde_cero_2024) - fecha de edición: 25/12/2024
+
+<!-- TODO: Añadir indice -->
 
 ## Introducción
 
@@ -27,24 +29,53 @@ En su forma más básica, **una función es un bloque de código que realiza una
 def nombre_de_funcion(parametros_opcionales):
     # Código dentro de la función
     return resultado_opcional
+
+nombre_de_funcion() #Llamada a la funcion
 ```
+
+- `def`: es la palabra reservada para definir funciones.
+- `nombre_de_funcion`: Aqui estamos dandole un nombre que haga referencia a la funcionalidad del codigo en cuestion. Se aconseja usar verbos para nombrar tus funciones (ejemplo `obtener_nombre()` ).
+- ``Parametro``: Son variables especiales que trabajan solo dentro de la funcion misma. Estas con el objetivo de almacenar un valor externo cuando se llame la funcion. Estos pueden ser opcionales si no requieren.
+- `return`: Palabra reservada que indica cual es el resultado final de dicha funcion o en su defecto lo que valdra la funcion cuando sea  'llamada'.
+- **Llamada a la funcion**: Este es mas un termino. Se hace alución a el uso explicito de la funcion creda, porque las funciones inicialmente no son ejecutadas hasta ser mencionadas especificamente en el codigo, como una llamada.
+
+Apartir de esto podemos hacer muchas cosas. Es importante mencionar que cada vez que usamos parentesis es porque se espera ingresar posiblemente un **argumento**. Los cuales son los valores que le indicamos dentro de los parentesis y que formaran como el valor asignar a los parametros indicados en la funcion. Veamos ejemplos mas claros a continuación.
 
 **Ejemplo básico 1. Mensaje de bienvenida:**
 
 ```python
 def saludo(nombre):
-    print(f"¡Hola, {nombre}! Bienvenido a nuestra tienda.")
+    mensaje = f"¡Hola, {nombre}! Bienvenido a nuestra tienda.")
+    return mensaje
 
-saludo("Juan")  # Salida: ¡Hola, Juan! Bienvenido a nuestra tienda.
+print(saludo("Juan"))  # Salida: ¡Hola, Juan! Bienvenido a nuestra tienda.
 ```
 
-Una analogia que tal vez te sea mas util es imaginar que las funciones no son mas que maquinas. Estas maquinas tienen forma de caja y lo que hacemos con ellas es ingresar un dato, digamos una letra como la 'x' y lo que esperamos cuando ingresamos este dato a la maquina es otro valor, 'y'
+Cuando llamamos la función `saludo()` dentro de la función `print()`, lo primero que a realizar es añadir un argumento valido, en este caso se espera un nombre (un string) y posteriormente la función tomara dicho valor y se lo asignara al parametro `nombre`, por ende ahora `nombre = "juan"` y con ello creamos que la variable mensaje tome dicho mensaje personalizado. Por ultimo indicamos que el valor que retornara la función sera la variable mensaje por lo que al imprimir la funcion saludo, muestra el valor de mensaje.
+
+Esto puede ser un poco conjunfuso al principio, asi que te brindo una analogia; imaginar que las funciones no son mas que maquinas. Estas maquinas tienen forma de caja y lo que hacemos con ellas es ingresar un dato, digamos una letra como la 'x' y lo que esperamos cuando ingresamos este dato a la maquina es otro valor, 'y'
+
+```python
+def Funcion(x):
+    y = x
+    return y
+
+Funcion(1)
+```
 
 ![alt text](./img/image6_01.png)
 
-Como puedes intuir en los ejemplos. Primeramente creamos una función con la palabra reservada `def` y seguida de esta escribimos el nombre de nuestra función y adjuntamos paréntesis. Dentro de estos podemos añadir parámetros, que no son mas que variables que podemos utilizar solo y exclusivamente dentro de nuestra función. Estas tomaran el valor que les demos, ya sea que les indiquemos unos por defecto u el el programador le pase dichos valores cuando se mande a llamar a la función.
+La interpretacion seria la siguiente:
 
-Con llamar a la función nos referimos a que en un inicio las funciones no se ejecutara, a no ser que el programador explícitamente escriba el nombre de dicha función después de crearla y le adjunte un par de paréntesis. Ejemplo de esto:
+Primeramente creamos una función con la palabra reservada `def` el cual crea nuestra maquina. Nuestra maquina tiene un nombre para identificarla, asi que enseguida ecribimos el nombre de nuestra maquina. Nuestra maquina necesita recibir la letra "x", para ello es que usamos los parentesis en las funciones, dentro de estos podemos añadir parámetros, que no son mas que valores que podemos utilizar solo y exclusivamente dentro de nuestra maquina. Estas tomaran el valor que le demos a "x", ya sea que les indiquemos unos por defecto u el programador le pase dichos valores cuando se mande a llamar a la maquina.
+
+Con llamar a la maquina nos referimos a que en un inicio las funciones no se ejecutara, a no ser que el programador explícitamente escriba el nombre de dicha maquina, ya que esto la activara y la hechara andar.
+
+Pero hay un detalle, hasta el momento aun no hemos definido que hace la maquina, solo que datos necesita. Para ello escribimos el codigo de sus instrucciones dentro de esta, en nuestro ejemplo no es mas que `x = y`. Y recuerda que al menos en nuestro ejemplo debemos de indicar que la maquina tiene el objetivo de generar un nuevo valor, en este caso "y", para ello le indicamos a la maquina que nos de el valor de "y" usando la palabra `return`.
+
+Y listo, ahora solo basta con llamar a a nuestra maquina para encenderla y no olvidemos darle un argumento, en este caso solo le indico el valor de `1`.
+
+Ya un poco mas explicito el proceso, veamos otro ejemplo.
 
 **Ejemplo básico 2. Sumar dos números:**
 
@@ -62,9 +93,9 @@ Ahora con esto, pasemos a ver con mayor detalle los siguientes temas.
 
 Los **parámetros** son variables que pasamos a una función para personalizar su comportamiento. Existen diferentes formas de utilizarlos en Python:
 
-### 1. **Valores predeterminados**  
+### Valores predeterminados  
 
-Podemos asignar un valor por defecto a los parámetros, para que la función lo use si no proporcionamos uno al llamarla. Esto es muy util si es que esperamos que los parametros si o si tengan un valor por defecto y asi evitar posibles errores.
+Podemos asignar un valor por defecto a los parámetros, para que la función lo use si no proporcionamos uno al llamarla. Esto es muy util si es que esperamos que los parametros si o si tengan un valor por defecto y asi evitar posibles errores. Esto es muy util porque ten en cuenta que si añadimos un parametro a una funcion esta sera **obligatorio** añadir le los argumentos que la función necesite cuando se mande a 'llamar'. En cambio al darle un valor por default, estos argumentos se vuelven opcionales.
 
 ```python
 def saludo(nombre="Cliente"):
@@ -72,9 +103,26 @@ def saludo(nombre="Cliente"):
 
 saludo()  # Salida: Hola, Cliente
 saludo("Ana")  # Salida: Hola, Ana
+
 ```
 
-### 2. **`*args` (argumentos variables)**  
+Si incluyes parámetros opcionales y sin definir un valor por predeterminado sera importante primero llamar aquellos que sean obligatorios y posteriormente los que seran opcionales.
+
+```python
+def saludo(cliente,mensaje="Hola"):
+    print(f"{mensaje}, cliente")
+
+saludo("Pablo") # Salida: Hola, Pablo
+saludo("Ana","Adiós") # Salida: Adiós, Ana
+```
+
+También es posible especificar sin importar el orden los valores que queremos añadir a dicha función, escribiendo dentro de esta el nombre de los parámetros y asignándoles el valor que deseamos.
+
+```python
+saludo(mensaje="Buen dia", cliente="María") # Salida: Buen dia, María
+```
+
+### `*args` (argumentos variables) 
 
 `*args` permite pasar un número indefinido de argumentos posicionales a una función. Util si no se tiene en mente, un numero finito de valores a utilizar.
 
@@ -116,7 +164,7 @@ resultado(3, *a)
 
 ```
 
-### 3. **`**kwargs` (argumentos nombrados variables)**  
+### `**kwargs` (argumentos nombrados variables)  
 
 `**kwargs` permite pasar un número indefinido de argumentos con nombre (clave-valor) a una función. Similar al anterior, pero con mayor utilidad para diccionarios
 
@@ -236,10 +284,10 @@ def dividir(a: float, b: float):
 print(dividir(10.0, 2.0))  # Salida: 5.0
 ```
 
-Si analizamos, vemos que ahora los paramentros 'a' y 'b' no solo estan asignados en la funcón `dividir()` si no que tambien tienen dos puntos adjuntos y seguido de esto la palabra float. Esto ultimo es la sintaxis para añadir las anotaciones de tipo. En este caso se coloco la palabra float, porque es el tipo de dato que se espera que sea a y b. Pero cabe aclarar que aunque se espera un dato flotante, aun asi puedes manipularlo como el dato que deses, no estas estrictamente obligado a usar flotantes.
+Si analizamos, vemos que ahora los paramentos 'a' y 'b' no solo están asignados en la función `dividir()` si no que también tienen dos puntos adjuntos y seguido de esto la palabra float. Esto ultimo es la sintaxis para añadir las anotaciones de tipo. En este caso se coloco la palabra float, porque es el tipo de dato que se espera que sea a y b. Pero cabe aclarar que aunque se espera un dato flotante, aun asi puedes manipularlo como el dato que deses, no estas estrictamente obligado a usar flotantes.
 
 Esto puede ser algo innecesario si lo ves asi en primer logar, pero en realidad es muy util ya que no solo te ayuda a limitar a el programador a entender que datos se deben ingresar y manipular, si no que para librerías mas avanzadas que inventan sus nuevos tipos de datos, mas allá de lo que python aporta, te ayuda a ver que funcionalidad u operaciones puedes realizar.
-Esto igualmente le tomaras mas importancia y daras gracia de su utilidad cuando pasemos a librerias como el uso de Discord.py y Flask.
+Esto igualmente le tomaras mas importancia y darás gracia de su utilidad cuando pasemos a librerís como el uso de Discord.py y Flask.
 
 Ahora mira este ejemplo:
 
@@ -257,7 +305,7 @@ def saludar(nombre: str) -> str:
 print(saludar("Pablo"))  # Salida: Hola, Pablo!
 ```
 
-Aquí hay un pequeño añadido, y es que al colocar `(nombre: str)` este le adjuntamos una anotacion `-> str`. Este ultimo indica que se espera que la función debe retornar un dato de tipo str, pero como ya aclare, este solo es un comentario, técnicamente si puedes devolver cualquier dato aunque no sea un str, solo que se espera que tu respetes dicho tipo.
+Aquí hay un pequeño añadido, y es que al colocar `(nombre: str)` este le adjuntamos una anotación `-> str`. Este ultimo indica que se espera que la función debe retornar un dato de tipo str, pero como ya aclare, este solo es un comentario, técnicamente si puedes devolver cualquier dato aunque no sea un str, solo que se espera que tu respetes dicho tipo.
 
 **Ejemplo 2. Precio de un producto:**
 
@@ -315,7 +363,7 @@ El módulo `typing` en Python se introdujo en la versión 3.5 para proporcionar 
 4. **Documentación del código:**
    - Los *type hints* mejoran la comprensión del propósito de las funciones, parámetros y variables.
 
-#### **Conceptos clave
+#### Conceptos clave
 
 1. **Tipos genéricos básicos:**
    - `List`, `Dict`, `Tuple`, `Set` son genéricos para anotar colecciones.
@@ -374,20 +422,6 @@ El módulo `typing` en Python se introdujo en la versión 3.5 para proporcionar 
          registros[nombre] = valores
      ```
 
-6. **Clases genéricas personalizadas:**
-   - Puedes usar `TypeVar` para crear clases genéricas.
-   - Ejemplo:
-
-     ```python
-     from typing import TypeVar, Generic
-
-     T = TypeVar('T')
-
-     class Caja(Generic[T]):
-         def __init__(self, contenido: T):
-             self.contenido = contenido
-     ```
-
 Ahora que conocemos estos detalles del lenguaje python, continuemos con la explicación de las funciones.
 
 ## devoluciones múltiples
@@ -396,7 +430,7 @@ Imagina que estás desarrollando un programa para calcular información estadís
 
 En Python, una función puede devolver múltiples valores empaquetándose en una tupla. Esto es muy útil cuando necesitas resultados relacionados entre sí. Los valores devueltos se pueden desempaquetar en variables individuales al momento de llamar la función. A continuación planteare 2 escenarios donde esto puede ser util.
 
-### Ejemplo Practico 1. Calcular area y perimetro de un triangulo
+### Ejemplo Practico 1. Calcular area y perímetro de un triangulo
 
 Supongamos que queremos calcular el área y el perímetro de un rectángulo dadas su base y altura. Esto lo hacemos dentro de una función que devuelve ambos valores.
 
@@ -468,3 +502,352 @@ vulnerable, reporte = evaluar_seguridad(6, ["Kernel", "Red"])
 print(vulnerable)  # Salida: True
 print(reporte)     # Salida: Vulnerable: 6 intentos detectados. Sistemas comprometidos: Kernel, Red.
 ```
+
+## Funciones importantes
+
+Como ya analizamos hasta este punto, las funciones son poderosas y pueden tener un conjunto de procesos que nos facilitan el proceso al momento de desarrollar alguno en nuestros programas. Python de forma nativa incluye un sin fin de funciones que desde el primer momento ya estamos utilizando, un ejemplo de estas seria la función `print()`.
+
+A continuación te mostrare un par de funciones que python nos ofrece y que podemos sacarle un buen de partido:
+
+Además de las funciones mencionadas anteriormente, hay muchas otras que son importantes para aprender en Python, dependiendo del tipo de problemas que deseas resolver. Aquí tienes un conjunto de funciones nativas y módulos relevantes que vale la pena explorar. Estas funciones son esenciales en el día a día del desarrollo y también para algoritmos más avanzados.
+
+1. **`zip()`**
+   - **Descripción:** Combina dos o más iterables (listas, tuplas, etc.) elemento por elemento, creando pares (o tuplas) de valores correspondientes.
+   - **Utilidad:** Útil para iterar sobre varias colecciones al mismo tiempo, o para fusionar datos.
+   - **Ejemplo:**
+
+     ```python
+     nombres = ["Ana", "Luis", "Pedro"]
+     edades = [25, 30, 35]
+     combinados = list(zip(nombres, edades))
+     print(combinados)  # [('Ana', 25), ('Luis', 30), ('Pedro', 35)]
+     ```
+
+2. **`enumerate()`**
+   - **Descripción:** Devuelve un objeto iterable que genera pares de índice y valor al recorrer una colección.
+   - **Utilidad:** Muy útil cuando necesitas el índice de los elementos al iterar.
+   - **Ejemplo:**
+
+     ```python
+     lista = ["manzana", "naranja", "pera"]
+     for indice, fruta in enumerate(lista):
+         print(f"{indice}: {fruta}")
+     # Resultado:
+     # 0: manzana
+     # 1: naranja
+     # 2: pera
+     ```
+
+3. **`filter()`**
+   - **Descripción:** Aplica una función a un iterable y devuelve un nuevo iterable con los elementos que cumplan con una condición.
+   - **Utilidad:** Para filtrar datos sin necesidad de bucles manuales.
+   - **Ejemplo:**
+
+     ```python
+     numeros = [10, 15, 20, 25, 30]
+     mayores_de_20 = list(filter(lambda x: x > 20, numeros))
+     print(mayores_de_20)  # [25, 30]
+     ```
+
+4. **`map()`**
+   - **Descripción:** Aplica una función a cada elemento de un iterable y devuelve un nuevo iterable con los resultados.
+   - **Utilidad:** Útil para realizar transformaciones rápidas en colecciones.
+   - **Ejemplo:**
+
+     ```python
+     numeros = [1, 2, 3, 4]
+     cuadrados = list(map(lambda x: x**2, numeros))
+     print(cuadrados)  # [1, 4, 9, 16]
+     ```
+
+5. **`all()` y `any()`**
+   - **`all()`**: Retorna `True` si todos los elementos de un iterable son verdaderos (o si el iterable está vacío).
+   - **`any()`**: Retorna `True` si al menos un elemento del iterable es verdadero.
+   - **Ejemplo:**
+
+     ```python
+     condiciones = [True, True, False]
+     print(all(condiciones))  # False
+     print(any(condiciones))  # True
+     ```
+
+6. **`reversed()`**
+   - **Invierte el orden de cualquier secuencia.**
+   - Ejemplo:
+
+     ```python
+     lista = [1, 2, 3]
+     print(list(reversed(lista)))  # [3, 2, 1]
+     ```
+
+7. **`sorted()`**
+   - **Ordena un iterable.**
+   - Ejemplo:
+
+     ```python
+     numeros = [3, 1, 4, 2]
+     print(sorted(numeros))  # [1, 2, 3, 4]
+     ```
+
+8. **`eval()`**
+   - **Evalúa una expresión de Python dada como cadena.**
+   - Ejemplo:
+
+     ```python
+     expresion = "2 + 3 * 4"
+     print(eval(expresion))  # 14
+     ```
+
+Aparte de todos los mostrados, python nos brinda muchas herramientas que solo seran posible acceder a estas si importamos modulos.
+
+## Alcance de las variables
+
+Imagina que estás desarrollando un programa que calcula el precio total de un producto después de aplicarle un descuento. Decides implementar esta funcionalidad con funciones, pero algo extraño ocurre: al ejecutar el código, el resultado final no parece calcularse correctamente.  
+
+```python
+def aplicar_descuento():
+    precio = precio - descuento  # Error aquí
+    return precio
+
+precio = 100
+descuento = 20
+print(aplicar_descuento())
+```
+
+En este ejemplo, el programa arroja un error: **`UnboundLocalError: local variable 'precio' referenced before assignment`**. ¿Qué está sucediendo? Aquí entra el tema del alcance de las variables.  
+
+### Definición
+
+En Python, el alcance se refiere a la región del código donde una variable es accesible. Existen tres palabras clave relevantes que afectan el alcance: `global`, `nonlocal`, y el uso por defecto sin ellas. Existen dos tipos principales de alcance:  
+
+1. **Alcance global**:  
+   - Una variable declarada fuera de cualquier función o bloque.  
+   - Puede ser accedida desde cualquier parte del programa.  
+   - Pero dentro de una función, no puede ser modificada directamente a menos que uses la palabra clave `global`.
+
+2. **Alcance local**:  
+   - Una variable declarada dentro de una función o bloque.  
+   - Sólo puede ser accedida dentro de ese contexto.  
+   - No afecta a las variables globales, incluso si tienen el mismo nombre.  
+
+### Reglas LEGB en Python
+
+Python sigue el principio **LEGB** para buscar variables:  
+
+1. **Local**: Primero busca en el ámbito local (dentro de la función actual).  
+2. **Enclosing**: Luego busca en funciones anidadas (si las hay).  
+3. **Global**: Si no encuentra nada, busca en el ámbito global.  
+4. **Built-in**: Por último, busca entre los nombres predefinidos de Python (como `len`, `print`, etc.).  
+
+En el ejemplo anterior, Python intenta encontrar la variable `precio` dentro de la función (ámbito local), pero no está definida allí.
+
+### Uso de `nonlocal` en funciones anidadas
+
+La palabra clave `nonlocal` sirve para trabajar con variables **del alcance externo inmediato**, es decir, las declaradas en una función envolvente. Esto es útil cuando tienes una función dentro de otra y deseas modificar una variable de la función externa sin tocar variables globales.
+
+**Ejemplo básico**.
+
+```python
+def funcion_externa():
+    mensaje = "Hola"
+
+    def funcion_interna():
+        nonlocal mensaje  # Modifica la variable de la función externa
+        mensaje = "Adiós"
+
+    funcion_interna()
+    print(mensaje)
+
+funcion_externa()  # Salida: Adiós
+```
+
+En este caso:
+
+- La variable `mensaje` está en el alcance de la función externa (`funcion_externa`).
+- Al usar `nonlocal`, permitimos que `funcion_interna` modifique esa variable.
+- Sin `nonlocal`, cualquier asignación dentro de `funcion_interna` crearía una nueva variable local llamada `mensaje`, sin afectar la original.
+
+**Ejemplo avanzado: Contador con funciones anidadas**.
+
+```python
+def crear_contador():
+    contador = 0  # Variable del alcance externo
+
+    def incrementar():
+        nonlocal contador  # Modificamos la variable de la función externa
+        contador += 1
+        return contador
+
+    return incrementar
+
+contador = crear_contador()
+print(contador())  # Salida: 1
+print(contador())  # Salida: 2
+```
+
+En este ejemplo:
+
+- `crear_contador` genera una función `incrementar` que conserva el valor de `contador`.
+- Usar `nonlocal` asegura que la variable `contador` no se cree como local en `incrementar`.
+
+#### Puntos importantes al usar `nonlocal`
+
+1. **Solo afecta variables en el alcance inmediatamente superior**:  
+   - No se puede usar `nonlocal` para acceder o modificar variables globales. Si necesitas trabajar con variables globales, usa `global`.
+
+2. **Evita confusiones con `global`**:  
+   - `nonlocal` se utiliza exclusivamente para modificar variables **en funciones anidadas**, mientras que `global` actúa a nivel de todo el módulo.
+
+3. **Facilita encapsulación y modularidad**:  
+   - Usar `nonlocal` es preferible a usar `global`, ya que limita el alcance de las modificaciones y evita efectos colaterales en otras partes del programa.
+
+4. **Úsalo con precaución**:  
+   - Modificar variables del alcance externo puede hacer que el código sea más difícil de leer y depurar si no está bien documentado.
+
+### `global` vs `nonlocal`
+
+```python
+x = 10  # Variable global
+
+def externa():
+    x = 20  # Variable de la función externa
+
+    def interna():
+        global x  # Modifica la variable global
+        x = 30
+
+    interna()
+    print("Valor en externa:", x)  # Sigue siendo 20, ya que `x` global fue modificada
+
+externa()
+print("Valor global:", x)  # Salida: 30
+```
+
+Ahora usando `nonlocal`:
+
+```python
+def externa():
+    x = 20  # Variable de la función externa
+
+    def interna():
+        nonlocal x  # Modifica la variable de la función externa
+        x = 30
+
+    interna()
+    print("Valor en externa:", x)  # Salida: 30
+
+externa()
+```
+
+### Elementos mutables y el alcance
+
+En Python, los elementos mutables como listas o diccionarios tienen un comportamiento diferente al de las variables que almacenan datos inmutables (números, cadenas, tuplas). Esto se debe a que las variables mutables permiten modificar su contenido sin necesidad de redefinirlas, lo que puede generar confusión en ciertos casos.
+
+**Caso de variables globales con elementos mutables:**
+
+```python
+mi_lista = [1, 2, 3]  # Variable global (mutable)
+
+def agregar_elemento():
+    mi_lista.append(4)  # Modifica el contenido de la lista global
+    print("Dentro de la función:", mi_lista)
+
+agregar_elemento()
+print("Fuera de la función:", mi_lista)  # Salida: [1, 2, 3, 4]
+```
+
+En este ejemplo:
+
+- Aunque no usamos `global`, el contenido de la lista global es modificado directamente porque estamos trabajando con el mismo objeto.
+- No estamos reasignando la variable `mi_lista`; simplemente modificamos su contenido.
+
+**Puntos importantes sobre elementos mutables:**
+
+1. **Modificación directa**:  
+   - No necesitas usar `global` ni `nonlocal` para modificar el contenido de un elemento mutable (como añadir a una lista o actualizar un diccionario).
+   - Esto aplica siempre que no estés intentando reasignar la variable a un nuevo objeto.
+
+2. **Reasignación vs modificación**:  
+   - Si intentas reasignar una variable mutable dentro de una función, necesitarás `global` o `nonlocal`:
+
+     ```python
+     mi_lista = [1, 2, 3]
+
+     def reasignar_lista():
+         global mi_lista
+         mi_lista = [4, 5, 6]  # Reasigna la lista global
+
+     reasignar_lista()
+     print(mi_lista)  # Salida: [4, 5, 6]
+     ```
+
+3. **Encapsulación y claridad**:  
+   - Usa `nonlocal` o argumentos y retornos en funciones anidadas para evitar modificar elementos globales, mejorando la modularidad del código.
+
+4. **Evita efectos secundarios**:  
+   - Documenta bien las modificaciones en elementos mutables para que los cambios no generen comportamientos inesperados.
+  
+Aqui aportare un pequeño parentesis a una utilidad que tenemos en python el cual es el Ellipsis.
+
+## Ellipsis en Python
+
+En Python, `...` (tres puntos consecutivos), conocido formalmente como **Ellipsis**, es un objeto especial que tiene diversos usos, aunque es poco común en comparación con otras características del lenguaje. Su representación literal es `Ellipsis` y es un singleton, es decir, una única instancia que se comparte en todo el programa.
+
+### Definición
+
+El objeto `Ellipsis` se encuentra integrado en Python y puede representarse tanto por `Ellipsis` como por `...`. Es útil en diversos contextos, especialmente en programación avanzada, aunque no tiene un uso obligatorio en la mayoría de los casos.
+
+**Sintaxis:**
+
+```python
+...
+# o
+Ellipsis
+```
+
+Ambas notaciones son equivalentes.
+
+### Principales Aplicaciones
+
+1. **Marcador de posición (Placeholder)**
+   `Ellipsis` se utiliza para indicar que algo está incompleto o pendiente de implementación en el código. Es comúnmente usado en métodos o funciones que aún no se han definido completamente.
+
+   ```python
+   def funcion_pendiente():
+       ...
+   ```
+
+   Este uso es similar a `pass`, pero más explícito para señalar que el cuerpo de la función no se ha implementado.
+
+   - **Ventaja:** Hace el código más legible al indicar claramente que falta lógica.
+
+2. **Acceso avanzado a estructuras de datos**
+   En el contexto de **arrays multidimensionales** (por ejemplo, al trabajar con bibliotecas como NumPy), `Ellipsis` se utiliza para simplificar el acceso a dimensiones específicas, especialmente cuando no es práctico especificar todas las dimensiones.
+
+   ```python
+   import numpy as np
+
+   array = np.random.rand(3, 4, 5, 6)
+   sub_array = array[..., 2]  # Equivale a array[:, :, :, 2]
+   ```
+
+   - **Función:** `...` permite reemplazar múltiples `:` en índices de arrays, haciéndolo más compacto y manejable.
+
+3. **Tipado en Python (Type Annotations)**
+   En proyectos que utilizan **type hints** con herramientas como `mypy`, `Ellipsis` puede ser usado para definir funciones o clases genéricas donde el tipo aún no está especificado.
+
+   ```python
+   from typing import Callable
+
+   FuncType = Callable[..., int]  # Función con cualquier número de argumentos que retorna un int.
+   ```
+
+   - **Aplicación:** Indicar que la función puede aceptar cualquier cantidad y tipo de argumentos.
+
+## Recursividad
+
+## Decoradores
+
+## Funcion lambda
+
+## Funciones asincronas

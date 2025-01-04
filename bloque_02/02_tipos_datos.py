@@ -1,5 +1,5 @@
 
-#TODO : Datos en python
+#Datos en python
 
 #! string (str) -> cadena de texto
 #ejemplos

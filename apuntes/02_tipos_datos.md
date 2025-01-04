@@ -2,7 +2,7 @@
 
 ![img: Tipos de datos](https://i.postimg.cc/htBKShRQ/tema-py-02.png)
 
-> *Repositorio*: [python_desde_cero_2024](https://github.com/Duz-Dev/python_desde_cero_2024) - fecha: 17/06/2024
+> *Repositorio*: [python_desde_cero_2024](https://github.com/Duz-Dev/python_desde_cero_2024) - fecha: 17/12/2024
 ---
 
 ## Temas adjuntos
@@ -20,7 +20,7 @@
 
 - [Tipos de datos](#tipos-de-datos)
   - [Temas adjuntos](#temas-adjuntos)
-  - [Definición](#definición)
+  - [Definición](#definici%C3%B3n)
   - [Tipos](#tipos)
   - [Menciones Honorificas](#menciones-honorificas)
   - [Amplia tus conocimientos](#amplia-tus-conocimientos)

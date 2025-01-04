@@ -1,5 +1,5 @@
 
-#TODO: Existen muchos operadores en python. Te mostrare los mas utilizados
+#Existen muchos operadores en python. Te mostrare los mas utilizados
 
 #! Aritméticos
 """
@@ -88,7 +88,7 @@ print("10" < "2")  # Salida: True (la comparación es lexicográfica, no numéri
 print(19 > 10)  # Salida: True
 print(3.5 < 7)  # Salida: True
 
-#note: print(10 > "10")  # Esto generará un TypeError en Python
+#nota: print(10 > "10")  # Esto generará un TypeError en Python
 
 #! lógicos
 #?Los operadores lógicos (and, or, not) pueden operar sobre cualquier tipo de dato. En Python, estos operadores no siempre devuelven un valor booleano, sino uno de los operandos.

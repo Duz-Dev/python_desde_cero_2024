@@ -18,11 +18,10 @@ En caso de tener dudas sobre algun tema en especifico, puedes unirte a nuestra [
 | 4   | [Tipos de datos II](./apuntes/04_tipos_datos_ll.md)  |
 | 5   | [Funciones](./apuntes/05_funciones.md)    |
 | 6   | [Excepciones](./apuntes/06_excepciones.md)  |
-| 7   | Módulos  |
-| 8   | Librerías nativas  |
-| 9   | El gestor PIP  |
-| 10   | Librerías populares  |
-| 11  | Clases y POO   |
+| 7   | [Módulos](./apuntes/07_modulos.md)  |
+| 8   | [Librerías - Paquetes](./apuntes/08_librerias_nativas.md)  |
+| 9  | [Clases y POO](./apuntes/09_clases.md)   |
+| 10   | próximamente |
 
 ## Ejercicios
 

@@ -1,5 +1,5 @@
 
-#TODO: Estructuras de control
+#Estructuras de control
 
 #! Condicionales. IF-ELSE-ELIF
 
