@@ -38,8 +38,8 @@ try:
 except ValueError:
     print("¡Ocurrió un error! Por favor introduce un número válido.")
 ```
-En este caso, si el usuario introduce algo que no es un número, el programa muestra un mensaje de error personalizado sin cerrarse.
 
+En este caso, si el usuario introduce algo que no es un número, el programa muestra un mensaje de error personalizado sin cerrarse.
 
 - **try:** En este bloque colocamos el código que deseamos ejecutar y que podría generar un error.
 - **except:** Aquí definimos cómo manejar la excepción si ocurre. Podemos especificar el tipo de error (por ejemplo, `ValueError`, `TypeError`) o usar un `except` general para capturar cualquier tipo de excepción.
@@ -310,4 +310,3 @@ except TypeError as e:
 ```
 
 Aquí desglosamos dos posibles excepciones de diferente tipo, en el primer caso tenemos una en donde el error sucede por convertir un dato str a float sin que sea compatible, y el segundo con typeError filtramos dos errores de una. Un mensaje en dado caso de que se intente operar con datos negativos u en su defecto que el valueError falle, typeError indicaría que se intento operar con datos incompatibles.
-

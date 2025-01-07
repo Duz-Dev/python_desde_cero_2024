@@ -119,74 +119,75 @@ print(mensaje)
 
 1. **`upper`**: Convierte todos los caracteres de la cadena a mayúsculas.
 
-```python
-s = "hola"
-print(s.upper())  # HOLA
-```
+   ```python
+   s = "hola"
+   print(s.upper())  # HOLA
+   ```
 
 2. **`lower`**: Convierte todos los caracteres de la cadena a minúsculas.
 
-```python
-s = "HOLA"
-print(s.lower())  # hola
-```
+   ```python
+   s = "HOLA"
+   print(s.lower())  # hola
+   ```
 
 3. **`capitalize`**: Convierte el primer carácter de la cadena a mayúscula y el resto a minúsculas.
 
-```python
-s = "hola mundo"
-print(s.capitalize())  # Hola mundo
-```
+   ```python
+   s = "hola mundo"
+   print(s.capitalize())  # Hola mundo
+   ```
 
 4. **`title`**: Convierte el primer carácter de cada palabra a mayúscula.
 
-```python
-s = "hola mundo"
-print(s.title())  # Hola Mundo
-```
+   ```python
+   s = "hola mundo"
+   print(s.title())  # Hola Mundo
+   ```
 
 5. **`strip`**: Elimina los espacios en blanco al principio y al final de la cadena.
 
-```python
-s = "  hola  "
-print(s.strip())  # "hola"
-```
+   ```python
+   s = "  hola  "
+   print(s.strip())  # "hola"
+   ```
 
 6. **`replace`**: Reemplaza una subcadena por otra.
 
-```python
-s = "hola mundo"
-print(s.replace("mundo", "Python"))  # hola Python
-```
+   ```python
+   s = "hola mundo"
+   print(s.replace("mundo", "Python"))  # hola Python
+   ```
 
 7. **`find`**: Devuelve el índice de la primera aparición de una subcadena. Si no se encuentra, devuelve -1.
 
-```python
-s = "hola mundo"
-print(s.find("mundo"))  # 5
-```
+   ```python
+   s = "hola mundo"
+   print(s.find("mundo"))  # 5
+   ```
 
-Esta ultima puede llegar a ser util ya que nos ayuda a confirmar si existen cadenas o fragmentos de texto dentro de un string. En el caso anterior hay que tener en cuenta que si no se hubiera teniendo en cuenta las mayúsculas, ejemplo:
+   Esta ultima puede llegar a ser util ya que nos ayuda a confirmar si existen cadenas o fragmentos de texto dentro de un string. En el caso anterior hay que tener en cuenta que si no se hubiera teniendo en cuenta las mayúsculas, ejemplo:
 
-```python
-s = "hola mundo"
-print(s.find("Mundo")) # -1
-```
+   ```python
+   s = "hola mundo"
+   print(s.find("Mundo")) # -1
+   ```
 
-En este ecenario daria un -1 ya que la subcadena "Mundo" no existe, a no ser que la letra 'm' sea minúscula.
+   En este escenario daría un -1 ya que la subcadena "Mundo" no existe, a no ser que la letra 'm' sea minúscula.
 
 8. **`split`**:  divide una cadena en varias subcadenas basándose en un delimitador. Por defecto, el delimitador es cualquier espacio en blanco (espacios, tabulaciones, saltos de línea, etc.). El resultado es una lista que contiene cada fragmento como un elemento.
 
-```python
-#Sintaxis basica
-str.split(sep=None, maxsplit=-1)
-```
+   ```python
+   #Sintaxis basica
+   str.split(sep=None, maxsplit=-1)
+   ```
 
    Parámetros:
    sep (opcional):
    El delimitador que se usará para dividir la cadena. Si no se especifica, se usarán espacios en blanco.
 
    Si el delimitador es una cadena vacía (""), se lanza un error.
+
    maxsplit (opcional):
    Especifica cuántas divisiones se deben realizar como máximo. El valor predeterminado es -1, lo que significa "sin límite" (divide todo lo que pueda).
 
@@ -476,37 +477,37 @@ Ambos tipos de datos numéricos (`int` y `float`) soportan una variedad de opera
 
 1. **Conversión entre `int` y `float`**: Puedes convertir entre estos tipos de datos utilizando las funciones `int()` y `float()`.
 
-```python
-x = 10
-y = 10.5
-x_float = float(x)  # 10.0
-y_int = int(y)  # 10
-```
+   ```python
+   x = 10
+   y = 10.5
+   x_float = float(x)  # 10.0
+   y_int = int(y)  # 10
+   ```
 
 2. **Redondeo**: El método `round()` redondea un número de punto flotante a un número específico de decimales.
 
-```python
-a = 5.5678
-print(round(a, 2))  # 5.57
-```
+   ```python
+   a = 5.5678
+   print(round(a, 2))  # 5.57
+   ```
 
 3. **Valor absoluto**: La función `abs()` devuelve el valor absoluto de un número.
 
-```python
-a = -5
-b = -3.14
-print(abs(a))  # 5
-print(abs(b))  # 3.14
-```
+   ```python
+   a = -5
+   b = -3.14
+   print(abs(a))  # 5
+   print(abs(b))  # 3.14
+   ```
 
 4. **Potencia**: La función `pow()` o el operador `**` se utiliza para elevar un número a una potencia.
 
-```python
-a = 2
-b = 3
-print(pow(a, b))  # 8
-print(a ** b)  # 8
-```
+   ```python
+   a = 2
+   b = 3
+   print(pow(a, b))  # 8
+   print(a ** b)  # 8
+   ```
 
 ### Detalles y usos
 
